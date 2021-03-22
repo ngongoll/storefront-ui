@@ -1,0 +1,7 @@
+@import "../helpers";
+html {
+  font-size: 18px;
+  @include for-desktop {
+    font-size: 32px;
+  }
+}

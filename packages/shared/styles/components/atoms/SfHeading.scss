@@ -10,7 +10,7 @@
       --heading-title-font,
       var(--font-weight--semibold),
       var(--h1-font-size),
-      1.6,
+      1.2,
       var(--font-family--secondary)
     );
     &.h2 {
@@ -19,7 +19,10 @@
     }
     &.h3 {
       font-size: var(--heading-title-font-size, var(--h3-font-size));
-      font-weight: var(--heading-title-font-weight, var(--font-weight--semibold));
+      font-weight: var(
+        --heading-title-font-weight,
+        var(--font-weight--semibold)
+      );
     }
     &.h4 {
       font-size: var(--heading-title-font-size, var(--h4-font-size));
