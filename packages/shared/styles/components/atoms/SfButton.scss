@@ -1,6 +1,6 @@
 @import "../../helpers";
 .sf-button {
-  --link-color: var(--button-color, var(--c-light-variant));
+  --link-color: var(--button-color, var(--c-dark-variant));
   box-sizing: border-box;
   position: relative;
   width: var(--button-size, var(--button-width));
@@ -8,15 +8,15 @@
   display: var(--button-display, flex);
   align-items: center;
   justify-content: center;
-  padding: var(--button-padding, var(--spacer-sm) var(--spacer-base));
-  color: var(--button-color, var(--c-light-variant));
+  padding: var(--button-padding, var(--spacer-sm) var(--spacer-lg));
+  color: var(--button-color, var(--link-color));
   background: var(--button-background, var(--c-primary));
   transition: var(--button-transition, background 0.8s);
   background-position: center;
-  text-transform: var(--button-text-transform, uppercase);
+  text-transform: var(--button-text-transform, none);
   text-decoration: var(--button-text-decoration);
   cursor: var(--button-cursor, pointer);
-  border-radius: var(--button-border-radius, 0);
+  border-radius: var(--button-border-radius, 9999px);
   white-space: var(--button-wrap, nowrap);
   @include font(
     --button-font,
@@ -44,8 +44,12 @@
           center/15000%;
       }
     }
+    &.color-secondary,
+    &.color-danger,
+    &.color-info {
+      color: var(--c-light-variant);
+    }
     &.color-light {
-      color: var(--c-gray);
       &:hover {
         --button-background: var(--c-light)
           radial-gradient(circle, transparent 1%, var(--c-text-disabled) 1%)
@@ -90,7 +94,7 @@
     --button-width: 100%;
   }
   &--outline {
-    --button-border-width: 1px;
+    --button-border-width: 3px;
     --button-background: transparent;
     --button-color: var(--c-text);
     &:hover {

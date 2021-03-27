@@ -13,8 +13,8 @@
   @include generate-color-variants(--_c-gray-accent, #222222);
   @include generate-color-variants(--_c-light-primary, #f5f5f5);
   @include generate-color-variants(--_c-light-secondary, #ffffff);
-  @include generate-color-variants(--_c-red-primary, #d12727);
-  @include generate-color-variants(--_c-red-secondary, #fcede8);
+  @include generate-color-variants(--_c-red-primary, #ff3363);
+  @include generate-color-variants(--_c-red-secondary, #fad3dc);
   @include generate-color-variants(--_c-yellow-primary, #ecc713);
   @include generate-color-variants(--_c-yellow-secondary, #f6e389);
   @include generate-color-variants(--_c-blue-primary, #0468db);
@@ -35,7 +35,8 @@
    * It is meant to be used in major interactive elements of the page. */
   @include assign-color-variants(--c-primary, --_c-green-primary);
   --c-primary-variant: var(--_c-green-secondary);
-  --c-on-primary: var(--_c-light-secondary);
+  --c-on-primary: var(--_c-dark-primary);
+
   // Secondary
   /* Should be used to drive attention in the elements with relevant info,
    * but where the user is not intended to take action. */
@@ -48,10 +49,12 @@
   @include assign-color-variants(--c-light, --_c-light-primary);
   --c-light-variant: var(--_c-light-secondary);
   --c-on-light: var(--c-black);
+
   // Gray
   @include assign-color-variants(--c-gray, --_c-gray-primary);
   --c-gray-variant: var(--_c-gray-secondary);
   --c-on-gray: var(--c-black);
+
   // Dark
   @include assign-color-variants(--c-dark, --_c-dark-primary);
   --c-dark-variant: var(--_c-dark-secondary);
@@ -62,14 +65,17 @@
   @include assign-color-variants(--c-info, --_c-blue-primary);
   --c-info-variant: var(--_c-blue-secondary);
   --c-on-info: var(--_c-light-secondary);
+
   // Success
   @include assign-color-variants(--c-success, --_c-green-primary);
   --c-success-variant: var(--_c-green-secondary);
   --c-on-success: var(--_c-light-secondary);
+
   // Waring
   @include assign-color-variants(--c-warning, --_c-yellow-primary);
   --c-warning-variant: var(--_c-yellow-secondary);
   --c-on-warning: var(--_c-light-secondary);
+
   // Danger
   @include assign-color-variants(--c-danger, --_c-red-primary);
   --c-danger-variant: var(--_c-red-secondary);
