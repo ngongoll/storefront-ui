@@ -5,6 +5,27 @@ html {
     font-size: 20px;
   }
 }
-h1, h2, h3, h4, h5 {
+
+p,
+div,
+span {
+  font-family: theinhardt-regular, Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: theinhardt-medium, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 110px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 1;
 }

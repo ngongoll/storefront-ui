@@ -1,7 +1,8 @@
 @import "../../helpers";
 button.sf-button {
-  border: 1px solid #000;
-  font-weight: 400;
+  border: 1px solid black;
+  font-family: var(--font-family--primary);
+  font-weight: normal;
   padding: 12px 32px;
 }
 button.sf-button:hover {
@@ -28,7 +29,7 @@ button.sf-button:hover {
   }
   & > &__menu-item{
     --menu-item-font-size: var(--font-size--base);
-    --menu-item-font-weight: var(--font-weight--medium);
+    --menu-item-font-weight: var(--font-weight--regular);
     display: var(--header-navigation-item-menu-item-display, flex);
     padding: var(--header-navigation-item-menu-item-padding, var(--spacer-sm));
     margin: var(--header-navigation-item-menu-item-margin, 0);
@@ -66,7 +67,7 @@ button.sf-button:hover {
           var(--font-weight--normal),
           var(--font-size--base),
           1.2,
-          var(--font-family--secondary)
+          var(--font-family--primary)
         );
         //text-transform: uppercase;
         text-decoration: initial;
@@ -90,7 +91,7 @@ button.sf-button:hover {
       width: var(--header-navigation-item-width, 100%);
       & > .sf-header-navigation-item__menu-item{
         --menu-item-font-size: var(--font-size--base);
-        --menu-item-font-weight: var(--font-weight--medium);
+        --menu-item-font-weight: var(--font-weight--regular);
         --menu-item-text-transform: uppercase;
         display: var(--header-navigation-item-menu-item-display, flex);
         padding: var(--header-navigation-item-menu-item-padding, var(--spacer-sm));

@@ -1,11 +1,28 @@
 <template>
   <div id="home">
-    <div class="header-section">
+    <section class="header-section">
       <h1>
         <span class="cl-accent">{{ "Umsatzsteuerfrei liefern" }}</span>
         <span>{{ "Grenzüberschreitend B2C in 30 europäische Länder" }}</span>
       </h1>
-    </div>
+      <SfButton
+          link="#"
+      >
+        {{ "Anmelden" }}
+      </SfButton>
+    </section>
+    <section class="section__wrapper bg-cl-light">
+      <div class="benefits">
+        <span>Registrierungsfrei</span>
+        <span>Steuerfrei</span>
+        <span>Haftungsfrei</span>
+      </div>
+      <h2>
+        <span>{{ "Stressfrei in alle EU-27" }}</span>
+        <span>{{ "+ Schweiz" }}</span>
+        <span>{{ "+ Großbritannien liefern" }}</span>
+      </h2>
+    </section>
     <SfHero class="hero">
       <SfHeroItem
         v-for="(img, index) in heroes"
@@ -327,8 +344,46 @@ export default {
     margin: 0 auto;
   }
 }
+section {
+  padding-bottom: 240px;
+  padding-top: 232px;
+}
+
+.section {
+  position: relative;
+  &__wrapper {
+    position: var(--header-wrapper-position);
+    width: 100%;
+    background: var(--header-background, #ffffff);
+    transition: var(--header-wrapper-transition, transform 150ms ease-in-out);
+    transform: var(--header-wrapper-transform);
+    box-shadow: var(--header-box-shadow);
+  }
+}
+
+.bg-cl-accent {
+  background-color: var(--c-primary);
+}
+.bg-cl-white {
+  background-color: white;
+}
+.bg-cl-light {
+  background-color: var(--c-light);
+}
 .cl-accent {
   color: var(--c-primary);
+}
+.benefits span {
+  bottom: 20px;
+  position: relative;
+  font-family: var(--font-family--secondary);
+  font-size: 32px;
+  padding: 0 45px;
+}
+.benefits span:before {
+  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
+  position: relative;
+  top: 20px;
 }
 .hero {
   --hero-item-background-position: center;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="75px" viewBox="0 0 84 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_checkmark_large</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-860.000000, -1309.000000)" stroke-width="6">
+            <g id="icon_checkmark_large" transform="translate(863.000000, 1312.000000)">
+                <path d="M34.5,69 C53.5533763,69 69,53.5533763 69,34.5 C69,15.4466237 53.5533763,0 34.5,0 C15.4466237,0 0,15.4466237 0,34.5 C0,53.5533763 15.4466237,69 34.5,69 Z" id="Stroke-1" stroke="#63EFC5"></path>
+                <polyline id="Stroke-3" stroke="#1D1D1B" points="27 23.8811716 40.5638716 41 79 11"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
