@@ -1,5 +1,11 @@
 <template>
   <div id="home">
+    <div class="header-section">
+      <h1>
+        <span class="cl-accent">{{ "Umsatzsteuerfrei liefern" }}</span>
+        <span>{{ "Grenzüberschreitend B2C in 30 europäische Länder" }}</span>
+      </h1>
+    </div>
     <SfHero class="hero">
       <SfHeroItem
         v-for="(img, index) in heroes"
@@ -320,6 +326,9 @@ export default {
     max-width: 1272px;
     margin: 0 auto;
   }
+}
+.cl-accent {
+  color: var(--c-primary);
 }
 .hero {
   --hero-item-background-position: center;

@@ -114,8 +114,8 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   data() {
     return {
-      navigationItems: ["women", "man", "kids"],
-      searchValues: "",
+      navigationItems: ["Lösungen", "Integration", "Preise", "Q+A", "OSS"],
+      searchValues: ""
     };
   },
   template: `
@@ -152,5 +152,5 @@ const Template = (args, { argTypes }) => ({
 export const Common = Template.bind({});
 Common.args = {
   title: "Storefront UI",
-  logo: "/assets/logo.svg",
+  logo: "/assets/clearvat_logo.svg",
 };

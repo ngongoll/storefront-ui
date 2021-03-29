@@ -25,18 +25,7 @@
           >
             <slot name="navigation"></slot>
           </nav>
-          <!--@slot Use this slot to replace default search bar-->
-          <slot name="search" v-bind="{ searchValue, searchPlaceholder }">
-            <SfSearchBar
-              :value="searchValue"
-              :placeholder="searchPlaceholder"
-              aria-label="Search"
-              class="sf-header__search"
-              @input="$emit('change:search', $event)"
-              @enter="$emit('enter:search', $event)"
-            />
-          </slot>
-          <!--@slot Use this slot to replace default header icons with custom content-->
+
           <slot
             name="header-icons"
             v-bind="{
@@ -55,47 +44,7 @@
                 data-testid="accountIcon"
                 @click="$emit('click:account')"
               >
-                <SfIcon
-                  :icon="accountIcon"
-                  size="1.25rem"
-                  :class="{
-                    'sf-header__icon is-active': activeIcon === 'account',
-                  }"
-                />
-              </SfButton>
-              <SfButton
-                v-if="wishlistIcon"
-                class="sf-button--pure sf-header__action"
-                data-testid="wishlistIcon"
-                @click="$emit('click:wishlist')"
-              >
-                <SfIcon
-                  class="sf-header__icon"
-                  :icon="wishlistIcon"
-                  :has-badge="wishlistHasProducts"
-                  :badge-label="wishlistItemsQty"
-                  size="1.25rem"
-                  :class="{
-                    'sf-header__icon is-active': activeIcon === 'wishlist',
-                  }"
-                />
-              </SfButton>
-              <SfButton
-                v-if="cartIcon"
-                class="sf-button--pure sf-header__action"
-                data-testid="cartIcon"
-                @click="$emit('click:cart')"
-              >
-                <SfIcon
-                  class="sf-header__icon"
-                  :icon="cartIcon"
-                  :has-badge="cartHasProducts"
-                  :badge-label="cartItemsQty"
-                  size="1.25rem"
-                  :class="{
-                    'sf-header__icon is-active': activeIcon === 'cart',
-                  }"
-                />
+                <slot>{{ "Anmelden" }}</slot>
               </SfButton>
             </div>
           </slot>
@@ -116,17 +65,13 @@ import {
 } from "../../../utilities/mobile-observer";
 import { isClient } from "../../../utilities/helpers";
 import SfImage from "../../atoms/SfImage/SfImage.vue";
-import SfSearchBar from "../../molecules/SfSearchBar/SfSearchBar.vue";
 import SfButton from "../../atoms/SfButton/SfButton.vue";
-import SfIcon from "../../atoms/SfIcon/SfIcon.vue";
 import SfLink from "../../atoms/SfLink/SfLink.vue";
 export default {
   name: "SfHeader",
   components: {
     SfImage,
-    SfSearchBar,
     SfButton,
-    SfIcon,
     SfLink,
   },
   props: {

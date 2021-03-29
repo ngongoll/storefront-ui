@@ -1,4 +1,13 @@
 @import "../../helpers";
+button.sf-button {
+  border: 1px solid #000;
+  font-weight: 400;
+  padding: 12px 32px;
+}
+button.sf-button:hover {
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+}
 .sf-header-navigation-item {
   position: var(--header-navigation-item-position, relative);
   display: flex;
@@ -20,7 +29,6 @@
   & > &__menu-item{
     --menu-item-font-size: var(--font-size--base);
     --menu-item-font-weight: var(--font-weight--medium);
-    --menu-item-text-transform: uppercase;
     display: var(--header-navigation-item-menu-item-display, flex);
     padding: var(--header-navigation-item-menu-item-padding, var(--spacer-sm));
     margin: var(--header-navigation-item-menu-item-margin, 0);
@@ -60,7 +68,7 @@
           1.2,
           var(--font-family--secondary)
         );
-        text-transform: uppercase;
+        //text-transform: uppercase;
         text-decoration: initial;
         text-align: center;
         @include for-desktop {
@@ -70,6 +78,9 @@
         &:focus {
           --header-navigation-item-color: var(--c-text);
           --header-navigation-item-border-color: var(--c-primary);
+        }
+        &:last-child {
+          //color: #cc0000;
         }
       }
     }
@@ -88,7 +99,7 @@
       }
     }
   }
-  
+
 }
 .sf-header-navigation {
   &__menu {
