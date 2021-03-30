@@ -87,15 +87,17 @@
         <div class="steps">
           <div class="step step-1 active">
             <div class="number">{{ "1" }}</div>
-            <div class="label">{{ "Jetzt anmelden" }}</div>
+            <div class="label">{{ "Jetzt" }}<br />{{ "anmelden" }}</div>
           </div>
+          <div class="arrow"></div>
           <div class="step step-2">
             <div class="number">{{ "2" }}</div>
-            <div class="label">{{ "Vertrag abschließen" }}</div>
+            <div class="label">{{ "Vertrag" }}<br />{{ "abschließen" }}</div>
           </div>
+          <div class="arrow"></div>
           <div class="step step-3">
             <div class="number">{{ "3" }}</div>
-            <div class="label">{{ "Nach ganz Europa liefern" }}</div>
+            <div class="label">{{ "Nach ganz" }}<br />{{ "Europa liefern" }}</div>
           </div>
         </div>
       </section>
@@ -107,12 +109,114 @@
           <span>{{ "Wir schaffen die Mehrwertsteuer in Europa ab." }}</span><br />
           <span class="text-light--variant">{{ "Für eCommerce Händler bei grenz-überschreitenden B2C Lieferungen. " }}</span>
         </h2>
-        <p>Du kümmerst dich um’s Geschäft!</p>
+        <p class="fs-xl">Du kümmerst dich um’s Geschäft!</p>
         <SfButton
             link="#"
+            class="color-light"
         >
           {{ "Jetzt registrieren" }}
         </SfButton>
+      </section>
+    </div>
+    <!-- service -->
+    <div class="fullwidth-wrapper">
+      <section>
+        <h2>
+          <span>{{ "Unser Service – Dein Vorteil" }}</span><br />
+          <span class="cl-accent">{{ "Alles inbegriffen" }}</span>
+        </h2>
+        <div class="sf-banner-grid banner-grid">
+         <div class="sf-banner-grid__row">
+          <div class="sf-banner-grid__col sf-banner-grid__col--medium">
+            <div class="sf-banner__wrapper">
+              <div class="benefits"><span>{{ "Ein Ansprechpartner in deiner Sprache" }}</span></div>
+            </div>
+          </div>
+          <div class="sf-banner-grid__col sf-banner-grid__col--medium">
+            <div class="checked sf-banner__wrapper">{{ "Intrastat Berichte automatisch" }}</div>
+          </div>
+        </div>
+        </div>
+        <ul class="checked offset">
+          <li>
+            <p class="medium">{{ "Steuerrückerstattung sofort" }}</p>
+            <p>{{ "Umgehende Erstattung von Steuerbeiträgen durch ausländische Steuerbehörden zum Beispiel bei Retouren." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Ein Ansprechpartner in deiner Sprache" }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Intrastat Berichte automatisch" }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Detaillierte Übersicht aller Orders" }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Nur ein Reconfile pro Tag" }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "24/7 Service Hotline" }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Intuitives Dashboard" }}</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- easy integrate -->
+    <div class="fullwidth-wrapper bg-light">
+      <section>
+        <h2>
+          <span class="text-primary">{{ "Easy integrate" }}</span><br />
+          <span>{{ "Unsere kostenlosen shop hosting PlugIns und APIs" }}</span>
+        </h2>
+      </section>
+    </div>
+    <!-- preise -->
+    <div class="fullwidth-wrapper">
+      <section>
+        <h2>
+          <span>{{ "Preise" }}</span>
+        </h2>
+      </section>
+    </div>
+    <!-- expertise -->
+    <div class="fullwidth-wrapper bg-primary">
+      <section>
+        <h2>
+          <span class="text-light">{{ "Unsere Expertise" }}</span><br />
+          <span>{{ "Mehrwertsteuer" }}</span>
+        </h2>
+        <p class="fs-xl">
+          <span class="medium">{{ "Anita Richter, Syndikus-Steuerberaterin" }}</span><br />
+          <span>{{ "Vice President Tax Technology Innovation" }}</span>
+        </p>
+      </section>
+    </div>
+    <!-- sicherheit -->
+    <div class="fullwidth-wrapper">
+      <section>
+        <h2>
+          <span class="text-primary">{{ "Zertifizierte Sicherheit" }}</span><br />
+          <span>{{ "für dein Geschäft" }}</span>
+        </h2>
+      </section>
+    </div>
+    <!-- oss -->
+    <div class="fullwidth-wrapper bg-light">
+      <section>
+        <h2>
+          <span class="text-primary">{{ "Der OSS – eine Alternative?" }}</span><br />
+          <span>{{ "Wenn du über den OSS nachdenkst, so solltest du Folgendes wissen:" }}</span>
+        </h2>
+      </section>
+    </div>
+    <!-- oss vs clearvat -->
+    <div class="fullwidth-wrapper">
+      <section>
+        <h2>
+          <span>{{ "OSS vs. ClearVAT" }}</span>
+        </h2>
       </section>
     </div>
 
@@ -129,85 +233,6 @@
         />
       </template>
     </SfBannerGrid>
-    <SfCallToAction
-      class="call-to-action"
-      title="Subscribe to Newsletters"
-      description="Be aware of upcoming sales and events. Receive gifts and special offers!"
-      button-text="subscribe"
-      image="/assets/storybook/Home/newsletter.jpg"
-    />
-    <div class="match-with-it">
-      <p class="match-with-it__paragraph">Match with it</p>
-      <SfButton class="sf-button--text smartphone-only">See all</SfButton>
-    </div>
-    <SfCarousel
-      :settings="{ peek: 16, breakpoints: { 1023: { peek: 0, perView: 2 } } }"
-      class="carousel"
-    >
-      <SfCarouselItem
-        v-for="(product, index) in products"
-        :key="index"
-        class="carousel__item"
-      >
-        <SfProductCard
-          :image="product.image"
-          :title="product.title"
-          :regular-price="product.price.regular"
-          :special-price="product.price.special"
-          :score-rating="product.rating.score"
-          :max-rating="product.rating.max"
-          :is-on-wishlist="product.isOnWishlist"
-          :show-add-to-cart-button="true"
-          :reviews-count="product.reviews"
-          :badge-label="product.badgeLabel"
-          :badge-color="product.badgeColor"
-          @click:wishlist="toggleWishlist(index)"
-        />
-      </SfCarouselItem>
-    </SfCarousel>
-    <SfSection
-      title-heading="Share Your Look"
-      subtitle-heading="#YOURLOOK"
-      class="share-your-look"
-    >
-      <div class="instagram-grid">
-        <div
-          v-for="(col, rowKey) in instagramFeed"
-          :key="rowKey"
-          class="instagram-grid__row"
-        >
-          <div
-            v-for="(image, colKey) in col"
-            :key="colKey"
-            class="instagram-grid__col"
-          >
-            <SfImage :src="image.url" :alt="image.content" width="470">{{
-              image.content
-            }}</SfImage>
-          </div>
-        </div>
-      </div>
-    </SfSection>
-    <SfBanner
-      class="app-banner desktop-only"
-      title="Download our application to your mobile"
-      subtitle="fashion to take away"
-      image="/assets/storybook/Home/bannerD.png"
-    >
-      <template #call-to-action>
-        <div class="app-banner__call-to-action">
-          <SfButton class="app-banner__button" aria-label="Go to Apple Product">
-            <SfImage src="/assets/storybook/Home/apple.png" alt="Apple" />
-          </SfButton>
-          <SfButton
-            class="app-banner__button"
-            aria-label="Go to Google Product"
-          >
-            <SfImage src="/assets/storybook/Home/google.png" alt="Google" />
-          </SfButton>
-        </div>
-      </template>
-    </SfBanner>
   </div>
 </template>
 <script>
@@ -458,6 +483,9 @@ section {
 .cl-accent {
   color: var(--c-primary);
 }
+.fs-xl {
+  font-size: var(--font-size--xl);
+}
 .benefits span {
   bottom: 20px;
   position: relative;
@@ -470,12 +498,14 @@ section {
   position: relative;
   top: 20px;
 }
-ul.features {
+ul.features,
+ul.checked {
   list-style-type: none;
 }
-ul.features li {
+ul.features li,
+ul.checked li {
   padding-bottom: 48px;
-  padding-left: 48px;
+  padding-left: 64px;
   position: relative;
 }
 ul.features li:before {
@@ -483,10 +513,27 @@ ul.features li:before {
   left: -48px;
   position: absolute;
 }
-ul.features li p {
+ul.checked li:before {
+  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
+  left: -48px;
+  position: absolute;
+}
+ul.features li p,
+ul.checked li p {
   font-size: var(--font-size--xl);
   line-height: 1.325;
   margin: 8px 0;
+}
+div.checked:before {
+  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
+}
+.steps {
+  display: flex;
+  align-items: baseline;
+}
+.step {
+  display: inline-block;
+  text-align: center;
 }
 .step .number {
   align-items: center;
@@ -494,12 +541,24 @@ ul.features li p {
   border-color: var(--c-primary);
   border-radius: 50%;
   display: flex;
+  font-family: var(--font-family--secondary);
+  font-size: var(--font-size--xl);
   height: 200px;
   justify-content: center;
+  margin-bottom: 32px;
   width: 200px;
 }
 .step.active .number {
   background-color: var(--c-primary);
+}
+.step .label {
+  font-family: var(--font-family--secondary);
+  font-size: var(--font-size--xl);
+}
+.steps .arrow {
+  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_arrow-horizontal.svg');
+  display: inline-block;
+  padding: 0 48px;
 }
 .hero {
   --hero-item-background-position: center;

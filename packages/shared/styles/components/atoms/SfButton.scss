@@ -8,7 +8,7 @@
   display: var(--button-display, flex);
   align-items: center;
   justify-content: center;
-  padding: var(--button-padding, var(--spacer-sm) var(--spacer-lg));
+  padding: var(--button-padding, var(--spacer-sm) var(--spacer-xl));
   color: var(--button-color, var(--link-color));
   background: var(--button-background, var(--c-primary));
   transition: var(--button-transition, background 0.8s);
