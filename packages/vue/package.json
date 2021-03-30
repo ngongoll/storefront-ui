@@ -14,7 +14,7 @@
     "prepublish": "yarn create-index-files",
     "test:dev": "vue-cli-service test:unit --watch",
     "version": "node scripts/version.js",
-    "storybook": "start-storybook -s ./public -p 6006",
+    "storybook": "start-storybook -s ./public -p 6007",
     "build-storybook": "build-storybook -s ./public"
   },
   "main": "./index.js",
