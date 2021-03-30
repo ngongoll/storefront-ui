@@ -1,4 +1,11 @@
 @import "../../helpers";
+:root {
+  --input-background: var(--c-primary-variant);
+  --input-padding: 1.6rem 1.6rem;
+  --input-label-padding: 0.6rem 1.6rem;
+  --input-label-background: transparent;
+  --input-label-color: var(--c-dark);
+}
 .sf-input {
   position: relative;
   box-sizing: border-box;
@@ -8,7 +15,7 @@
     --input-height,
     calc(
       var(--spacer-base) + var(--spacer-2xs) +
-      var(--input-label-font-size, var(--font-size--lg))
+        var(--input-label-font-size, var(--font-size--lg))
     )
   );
   &__label {
@@ -37,9 +44,9 @@
     @include font(
       --input-label-font,
       var(--font-weight--normal),
-      var(--font-size--lg),
+      var(--font-size--base),
       1,
-      var(--font-family--secondary)
+      var(--font-family--primary)
     );
   }
   &__bar {
@@ -65,6 +72,9 @@
   &__error-message {
     color: var(--input-error-message-color, var(--c-danger));
     min-height: calc(var(--font-size--xs) * 1.2);
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.3rem;
     @include font(
       --input-error-message-font,
       var(--font-weight--medium),
@@ -84,31 +94,35 @@
   }
   &__wrapper {
     position: relative;
-    margin: var(--input-margin, 0 0 var(--spacer-xs) 0);
+    margin: 0;
   }
   input {
     display: block;
     box-sizing: border-box;
-    padding: var(--input-padding, var(--spacer-sm) 0 var(--spacer-xs) 0);
-    @include border(--input-border, 0 0 1px 0, solid, var(--c-link));
+    padding: var(--input-padding);
+    border: none;
     background: var(--input-background);
     color: var(--input-color, var(--c-text));
     @include font(
       --input-font,
       var(--font-weight--normal),
-      var(--font-size--lg),
+      var(--font-size--base),
       1,
-      var(--font-family--secondary)
+      var(--font-family--primary)
     );
     text-align: var(--input-text-align);
-    &:focus, &:placeholder-shown, &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+    &:focus,
+    &:placeholder-shown,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
       & ~ * {
-        --icon-color: var(--c-primary);
+        --icon-color: var(--c-dark);
         --input-password-icon-background: var(--c-primary);
-        --input-label-top: 0;
-        --input-label-color: var(--c-primary);
+        --input-background-color: var(--c-primary);
+        --input-label-top: 1rem;
         --input-label-font-size: var(--font-size--xs);
-        --input-bar-width: 50%;
+        // --input-bar-width: 50%;
         --input-error-message-color: var(--c-primary);
       }
     }
@@ -194,7 +208,7 @@
     --input-padding: var(--spacer-xs);
     --input-label-left: var(--spacer-xs);
     --input-label-font-size: var(--font-size--xs);
-    --input-label-color: var(--c-secondary-variant);
+    --input-label-color: var(--c-dark);
     --input-label-transition: color 150ms ease;
     --input-border: none;
     &.has-text {
@@ -213,7 +227,8 @@
   }
   &--outline {
     --input-label-left: var(--spacer-sm);
-    --input-padding: var(--spacer-xs) var(--spacer-xs) var(--spacer-xs) var(--spacer-sm);
+    --input-padding: var(--spacer-xs) var(--spacer-xs) var(--spacer-xs)
+      var(--spacer-sm);
     --input-border-color: var(--c-secondary-variant);
     --input-label-background: var(--c-white);
     --input-label-font-size: var(--font-size-base);

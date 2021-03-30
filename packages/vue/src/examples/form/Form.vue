@@ -1,9 +1,33 @@
 <template>
   <div id="form-template">
     <form class="form">
+      <SfComponentSelect
+        v-model="anrede"
+        label="Anrede"
+        class="form__element form__element--half form__select"
+        error-message="Wähen Sie Ihre Anrede."
+        @blur="anredeBlur = false"
+      >
+        <SfComponentSelectOption
+          v-for="anredeOption in anredeOptions"
+          :key="anredeOption"
+          :value="anredeOption"
+        >
+          {{ anredeOption }}
+        </SfComponentSelectOption>
+      </SfComponentSelect>
+      <SfInput
+        v-model="titel"
+        label="Titel"
+        name="firstName"
+        class="form__element form__element--half form__element--half-even"
+        :valid="firstNameBlur || validFirstName(firstName)"
+        error-message="Please type your name"
+        @blur="firstNameBlur = false"
+      />
       <SfInput
         v-model="firstName"
-        label="First name"
+        label="Vorname"
         name="firstName"
         class="form__element form__element--half"
         required
@@ -165,10 +189,13 @@ export default {
       zipCodeBlur: true,
       country: "",
       countryBlur: true,
+      anrede: "",
+      anredeBlur: true,
       phoneNumber: "",
       phoneNumberBlur: true,
       email: "",
       emailBlur: true,
+      anredeOptions: ["–––", "Frau", "Herr"],
       countries: [
         "Austria",
         "Azerbaijan",

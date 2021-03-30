@@ -1,8 +1,13 @@
 @import "../../helpers";
+:root {
+  --component-select-padding: 0 1.6rem;
+  --component-select-selected-padding: 0;
+  --component-select-option-background: var(--c-light);
+  --component-select-background: var(--c-primary-variant);
+}
 .sf-component-select-option {
   display: flex;
   box-sizing: border-box;
-  padding: var(--component-select-option-padding, var(--spacer-sm));
   @include border(
     --component-select-option-border,
     1px 0 0 0,
@@ -40,11 +45,9 @@
   box-sizing: border-box;
   width: var(--component-select-width);
   height: var(--component-select-height);
-  padding: var(
-    --component-select-padding,
-    0 0 calc(var(--font-size--xs) * 1.2) 0
-  );
+  padding: var(--component-select-padding);
   color: var(--component-select-color, var(--c-text));
+  background-color: var(--component-select-background);
   cursor: default;
   &__label {
     position: absolute;
@@ -63,9 +66,9 @@
     @include font(
       --component-select-label-font,
       var(--font-weight--normal),
-      var(--font-size--lg),
+      var(--font-size--base),
       1,
-      var(--font-family--secondary)
+      var(--font-family--primary)
     );
     &::after {
       content: var(--component-select-label-required);
@@ -80,8 +83,8 @@
     transform: translate3d(0, -50%, 0);
   }
   &__selected {
-    --product-option-font-size: var(--font-size--lg);
-    --component-select-option-font-size: var(--font-size--lg);
+    --product-option-font-size: var(--font-size--base);
+    --component-select-option-font-size: var(--font-size--base);
     box-sizing: border-box;
     display: flex;
     align-items: var(--component-select-selected-align-items, center);
@@ -89,10 +92,7 @@
       --component-select-selected-justify-content,
       flex-start
     );
-    padding: var(
-      --component-select-selected-padding,
-      var(--spacer-sm) var(--spacer-lg) var(--spacer-xs) 0
-    );
+    padding: var(--component-select-selected-padding);
     margin: var(--component-select-margin, 0 0 var(--spacer-xs) 0);
     background: var(--component-select-background);
     color: var(--component-select-color, var(--c-text));
