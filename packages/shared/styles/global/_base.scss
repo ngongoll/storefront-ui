@@ -1,4 +1,8 @@
 @import "../helpers";
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 18px;
   @include for-desktop {
@@ -16,16 +20,21 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span {
   font-family: theinhardt-medium, Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  font-size: 110px;
+  font-size: 5.5rem;
   line-height: 1;
 }
 
 h2 {
-  font-size: 80px;
+  font-size: 4rem;
   line-height: 1;
 }

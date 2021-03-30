@@ -1,40 +1,121 @@
 <template>
   <div id="home">
-    <section class="header-section">
-      <h1>
-        <span class="cl-accent">{{ "Umsatzsteuerfrei liefern" }}</span>
-        <span>{{ "Grenzüberschreitend B2C in 30 europäische Länder" }}</span>
-      </h1>
-      <SfButton
-          link="#"
-      >
-        {{ "Anmelden" }}
-      </SfButton>
-    </section>
-    <section class="section__wrapper bg-cl-light">
-      <div class="benefits">
-        <span>Registrierungsfrei</span>
-        <span>Steuerfrei</span>
-        <span>Haftungsfrei</span>
-      </div>
-      <h2>
-        <span>{{ "Stressfrei in alle EU-27" }}</span>
-        <span>{{ "+ Schweiz" }}</span>
-        <span>{{ "+ Großbritannien liefern" }}</span>
-      </h2>
-    </section>
-    <SfHero class="hero">
-      <SfHeroItem
-        v-for="(img, index) in heroes"
-        :key="index"
-        :image="img.image"
-        :title="img.title"
-        :subtitle="img.subtitle"
-        :button-text="img.buttonText"
-        :background="img.background"
-        :class="img.className"
-      />
-    </SfHero>
+    <!-- intro section/hero -->
+    <div class="fullwidth-wrapper">
+      <section class="header-section">
+        <h1>
+          <span class="cl-accent">{{ "Umsatzsteuerfrei liefern" }}</span>
+          <span>{{ "Grenzüberschreitend B2C in 30 europäische Länder" }}</span>
+        </h1>
+        <SfButton
+            link="#"
+        >
+          {{ "Anmelden" }}
+        </SfButton>
+      </section>
+    </div>
+    <!-- map -->
+    <div class="fullwidth-wrapper bg-light">
+      <section>
+        <div class="benefits">
+          <span>{{ "Registrierungsfrei" }}</span>
+          <span>{{ "Steuerfrei" }}</span>
+          <span>{{ "Haftungsfrei" }}</span>
+        </div>
+        <h2>
+          <span>{{ "Stressfrei in alle EU-27" }}</span>
+          <span>{{ "+ Schweiz" }}</span>
+          <span>{{ "+ Großbritannien liefern" }}</span>
+        </h2>
+      </section>
+    </div>
+    <!-- benefits -->
+    <div class="fullwidth-wrapper">
+      <section>
+        <h2>
+          <span>{{ "Umsatzsteuerfrei liefern nach ganz Europa" }}</span>
+        </h2>
+        <ul class="features offset">
+          <li>
+            <p class="medium">{{ "Steuerfrei" }}</p>
+            <p>{{ "Deine Ausgangsrechnung zeigt in ganz Europa immer 0% Umsatzsteuer." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Haftungsfrei" }}</p>
+            <p>{{ "In deiner Buchhaltung gibt es 0,00 EUR ausländische  Steuerschulden." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Registrierungsfrei" }}</p>
+            <p>{{ "Du musst dich in keinem EU-Land registrieren." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Betriebsprüfungsfrei" }}</p>
+            <p>{{ "Keine Betriebsprüfungen im Ausland. Die Haftung liegt bei eClear." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Sorgenfrei" }}</p>
+            <p>{{ "Mit Steuersätzen, Ausnahmen und den häufigen Änderungen beschäftigen wir uns. Dein Steuersatz ist immer 0% Umsatzsteuer." }}</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- slider -->
+    <div class="fullwidth-wrapper bg-secondary">
+      <section>
+        <h2 class="text-primary"><span>{{ "8’065 Händer sind schon angeschlossen" }}</span></h2>
+        <SfHero class="hero">
+          <SfHeroItem
+              v-for="(img, index) in heroes"
+              :key="index"
+              :image="img.image"
+              :title="img.title"
+              :subtitle="img.subtitle"
+              :button-text="img.buttonText"
+              :background="img.background"
+              :class="img.className"
+          />
+        </SfHero>
+      </section>
+    </div>
+    <!-- easy register -->
+    <div class="fullwidth-wrapper">
+      <section>
+        <h2>
+          <span class="text-primary">{{ "Easy register." }}</span><br />
+          <span>{{ "Einfach ganz Europa" }}</span>
+        </h2>
+        <div class="steps">
+          <div class="step step-1 active">
+            <div class="number">{{ "1" }}</div>
+            <div class="label">{{ "Jetzt anmelden" }}</div>
+          </div>
+          <div class="step step-2">
+            <div class="number">{{ "2" }}</div>
+            <div class="label">{{ "Vertrag abschließen" }}</div>
+          </div>
+          <div class="step step-3">
+            <div class="number">{{ "3" }}</div>
+            <div class="label">{{ "Nach ganz Europa liefern" }}</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- wir schaffen die mwst ab -->
+    <div class="fullwidth-wrapper bg-primary">
+      <section>
+        <h2>
+          <span>{{ "Wir schaffen die Mehrwertsteuer in Europa ab." }}</span><br />
+          <span class="text-light--variant">{{ "Für eCommerce Händler bei grenz-überschreitenden B2C Lieferungen. " }}</span>
+        </h2>
+        <p>Du kümmerst dich um’s Geschäft!</p>
+        <SfButton
+            link="#"
+        >
+          {{ "Jetzt registrieren" }}
+        </SfButton>
+      </section>
+    </div>
+
     <SfBannerGrid class="banner-grid">
       <template v-for="banner in banners" #[banner.slot]>
         <SfBanner
@@ -348,7 +429,18 @@ section {
   padding-bottom: 240px;
   padding-top: 232px;
 }
-
+.medium {
+  font-family: var(--font-family--secondary);
+}
+.fullwidth-bg {
+  background: #cc0000;
+  width: 100%;
+}
+.fullwidth-wrapper {
+  margin: 0 -9999rem;
+  padding: 0.25rem 9999rem;
+  width: 100%;
+}
 .section {
   position: relative;
   &__wrapper {
@@ -360,15 +452,8 @@ section {
     box-shadow: var(--header-box-shadow);
   }
 }
-
-.bg-cl-accent {
-  background-color: var(--c-primary);
-}
-.bg-cl-white {
-  background-color: white;
-}
-.bg-cl-light {
-  background-color: var(--c-light);
+.offset {
+  padding: 0 var(--spacer-3xl);
 }
 .cl-accent {
   color: var(--c-primary);
@@ -384,6 +469,37 @@ section {
   content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
   position: relative;
   top: 20px;
+}
+ul.features {
+  list-style-type: none;
+}
+ul.features li {
+  padding-bottom: 48px;
+  padding-left: 48px;
+  position: relative;
+}
+ul.features li:before {
+  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_plus.svg');
+  left: -48px;
+  position: absolute;
+}
+ul.features li p {
+  font-size: var(--font-size--xl);
+  line-height: 1.325;
+  margin: 8px 0;
+}
+.step .number {
+  align-items: center;
+  border: 8px solid;
+  border-color: var(--c-primary);
+  border-radius: 50%;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  width: 200px;
+}
+.step.active .number {
+  background-color: var(--c-primary);
 }
 .hero {
   --hero-item-background-position: center;
