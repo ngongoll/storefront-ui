@@ -1,4 +1,12 @@
 @import "../../helpers";
+.sf-hero__control--left button.sf-button,
+.sf-hero__control--right button.sf-button {
+  border: none;
+}
+.sf-hero__control--left button.sf-button:hover,
+.sf-hero__control--right button.sf-button:hover {
+  background: none;
+}
 .sf-arrow {
   --button-width: 2.75rem;
   --button-height: 2.75rem;
@@ -11,10 +19,12 @@
   display: flex;
   align-items: center;
   justify-content: var(--arrow-justify-content, center);
+  opacity: 0.6;
   &:hover {
     --button-background: var(--c-dark);
     --icon-color: var(--c-light);
     --button-box-shadow-opacity: 0.25;
+    opacity: 1;
   }
   &:active {
     --button-background: var(--c-link);

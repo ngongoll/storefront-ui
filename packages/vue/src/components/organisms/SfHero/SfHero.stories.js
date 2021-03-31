@@ -33,9 +33,9 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   data() {
     return {
-      title: "Colorful summer dresses are already in store",
-      image: "/assets/storybook/SfHero/hero.png",
-      subtitle: "Summer Collection 2019",
+      title: "ClearVAT macht unsere EU-Steuern – wir kümmern uns lieber um die Kunst.",
+      image: "/assets/storybook/images/slider-img_fineartmultiple.jpg",
+      subtitle: "Dr. Vanessa Moos, Managing Director",
       buttonText: "Learn more",
       background: "#ECEFF1",
     };
@@ -54,10 +54,10 @@ const Template = (args, { argTypes }) => ({
     />
     <SfHeroItem
         :class="classes"
-        title="Colorful summer dresses are already in store"
-        subtitle="Summer Collection 2019"
+        title="ClearVAT macht unsere EU-Steuern – wir kümmern uns lieber um die Kunst."
+        subtitle="Dr. Vanessa Moos, Managing Director"
         button-text="Learn more"
-        image="/assets/storybook/SfHero/hero.png"
+        image="/assets/storybook/images/slider-img_fineartmultiple.jpg"
         background="#FCE4EC"
     />
   </SfHero>`,

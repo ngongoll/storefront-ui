@@ -1,22 +1,22 @@
 <template>
   <li class="glide__slide sf-hero-item" :style="style">
     <component :is="wrapper" class="sf-hero-item__wrapper" :link="link">
-      <!--@slot hero item subtitle. Slot content will replace default <h2> tag-->
-      <slot name="subtitle" v-bind="{ subtitle }">
-        <div v-if="subtitle" class="sf-hero-item__subtitle">{{ subtitle }}</div>
-      </slot>
       <!--@slot hero item title. Slot content will replace default <h1> tag-->
       <slot name="title" v-bind="{ title }">
         <h1 v-if="title" class="sf-hero-item__title">{{ title }}</h1>
       </slot>
+      <!--@slot hero item subtitle. Slot content will replace default <h2> tag-->
+      <slot name="subtitle" v-bind="{ subtitle }">
+        <div v-if="subtitle" class="sf-hero-item__subtitle">{{ subtitle }}</div>
+      </slot>
       <!--@slot Call to action section. Slot content will replace default SfButton component-->
-      <slot name="call-to-action" v-bind="{ buttonText, link }">
+      <!--<slot name="call-to-action" v-bind="{ buttonText, link }">
         <div v-if="buttonText && !isMobile" class="sf-hero-item__button">
           <SfButton :link="link">
             {{ buttonText }}
           </SfButton>
         </div>
-      </slot>
+      </slot>-->
     </component>
   </li>
 </template>

@@ -9,14 +9,15 @@
   >
     <!--@slot Use this slot to replace arrow icon-->
     <slot>
-      <component
+      <img class="sf-arrow__icon" src="/assets/storybook/icons/icon_arrow-left.svg">
+      <!--<component
         :is="injections.components.SfIcon"
         size="1.5rem"
         icon="arrow_left"
         aria-hidden="true"
         v-bind="data.attrs"
         :class="[data.class, data.staticClass, 'sf-arrow__icon']"
-      />
+      />-->
     </slot>
   </component>
 </template>

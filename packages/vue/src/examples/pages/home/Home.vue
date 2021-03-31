@@ -61,7 +61,7 @@
     </div>
     <!-- slider -->
     <div class="fullwidth-wrapper bg-secondary">
-      <section>
+      <section class="offset-y">
         <h2 class="text-primary"><span>{{ "8’065 Händer sind schon angeschlossen" }}</span></h2>
         <SfHero class="hero">
           <SfHeroItem
@@ -125,23 +125,13 @@
           <span>{{ "Unser Service – Dein Vorteil" }}</span><br />
           <span class="cl-accent">{{ "Alles inbegriffen" }}</span>
         </h2>
-        <div class="sf-banner-grid banner-grid">
-         <div class="sf-banner-grid__row">
-          <div class="sf-banner-grid__col sf-banner-grid__col--medium">
-            <div class="sf-banner__wrapper">
-              <div class="benefits"><span>{{ "Ein Ansprechpartner in deiner Sprache" }}</span></div>
-            </div>
-          </div>
-          <div class="sf-banner-grid__col sf-banner-grid__col--medium">
-            <div class="checked sf-banner__wrapper">{{ "Intrastat Berichte automatisch" }}</div>
-          </div>
-        </div>
-        </div>
         <ul class="checked offset">
           <li>
             <p class="medium">{{ "Steuerrückerstattung sofort" }}</p>
             <p>{{ "Umgehende Erstattung von Steuerbeiträgen durch ausländische Steuerbehörden zum Beispiel bei Retouren." }}</p>
           </li>
+        </ul>
+        <ul class="checked col-2 offset">
           <li>
             <p class="medium">{{ "Ein Ansprechpartner in deiner Sprache" }}</p>
           </li>
@@ -183,14 +173,55 @@
     <!-- expertise -->
     <div class="fullwidth-wrapper bg-primary">
       <section>
-        <h2>
-          <span class="text-light">{{ "Unsere Expertise" }}</span><br />
-          <span>{{ "Mehrwertsteuer" }}</span>
-        </h2>
-        <p class="fs-xl">
-          <span class="medium">{{ "Anita Richter, Syndikus-Steuerberaterin" }}</span><br />
-          <span>{{ "Vice President Tax Technology Innovation" }}</span>
-        </p>
+        <div class="col-2">
+          <div>
+            <h2>
+              <span class="text-light">{{ "Unsere Expertise" }}</span><br />
+              <span>{{ "Mehrwertsteuer" }}</span>
+            </h2>
+            <p class="fs-xl">
+              <span class="medium">{{ "Anita Richter, Syndikus-Steuerberaterin" }}</span><br />
+              <span>{{ "Vice President Tax Technology Innovation" }}</span>
+            </p>
+            <SfButton
+                link="#"
+                class="color-light"
+            >
+              {{ "Frag Anita" }}
+            </SfButton>
+          </div>
+          <div class="rounded-img-container"></div>
+        </div>
+        <div>
+          <table class="qa offset-left">
+            <tbody>
+              <tr>
+                <td class="question medium">{{ "Brauche ich gar keine Registrierung mehr?" }}</td>
+                <td class="fs-xl medium">{{ "Richtig!" }}<br />{{ "Du brauchst gar keine Registrierung im Ausland mehr. Übrigens auch keine Steuerberater vor Ort." }}</td>
+              </tr>
+              <tr>
+                <td class="question medium">{{ "Was ist, wenn ich im Ausland ein Lager betreibe? Zum Beispiel Amazon FBA." }}</td>
+                <td class="fs-xl medium">{{ "Kein Problem!" }}<br />{{ "Dann benötigst Du eine Registrierung in diesem Land, um eine Meldung zu erstellen (ohne Zahlung). Das können wir Dir als automatisierten und integrierten Prozess anbieten. Sprich uns nach Deiner Registrierung darauf an." }}</td>
+              </tr>
+              <tr>
+                <td class="question medium">{{ "Ich bin schon in einigen Ländern registriert. Kann ich ClearVAT mit diesen Registrierungen kombinieren?" }}</td>
+                <td class="fs-xl medium">{{ "Ja, das ist möglich!" }}<br />{{ "Der Preis ist dann möglicherweise etwas höher. Gib das bei der Registrierung einfach an, wir berücksichtigen es beim Angebot" }}</td>
+              </tr>
+              <tr>
+                <td class="question medium">{{ "Muss ich die Steuersätze und die ganzen Ausnahmen für meine Produkte in allen Ländern kennen?" }}</td>
+                <td class="fs-xl medium">{{ "Nein!" }}<br />{{ "Wir kennen die Steuersätze für über 80 Millionen Artikel in 30 Europäischen Ländern inkl. alle Ausnahmen – also rund 2,4 Mrd. Codes" }}</td>
+              </tr>
+              <tr>
+                <td class="question medium">{{ "Wie verbuche ich die Lieferungen?" }}</td>
+                <td class="fs-xl medium">{{ "Ganz einfach!" }}<br />{{ "Du bekommst von unseren MwSt-Experten ein Merkblatt für Deine Buchhaltung und Deinen Steuerberater." }}</td>
+              </tr>
+              <tr>
+                <td class="question medium">{{ "Wer übernimmt die steuerliche Haftung und das Risiko der Umsatzsteuerprüfung im Ausland?" }}</td>
+                <td class="fs-xl medium">{{ "Wir." }}<br />{{ "eClear befreit Dich vollständig von allen MwSt-Verpflichtungen im Lieferland." }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
     <!-- sicherheit -->
@@ -209,6 +240,28 @@
           <span class="text-primary">{{ "Der OSS – eine Alternative?" }}</span><br />
           <span>{{ "Wenn du über den OSS nachdenkst, so solltest du Folgendes wissen:" }}</span>
         </h2>
+        <ul class="minus col-2 offset-left">
+          <li>
+            <p class="medium">{{ "Haftung" }}</p>
+            <p>{{ "Du meldest im Heimatland aber, du bleibst steuerpflichtig im Bestimmungsland." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Geld" }}</p>
+            <p>{{ "Du zahlst im Heimatland aber die Rückerstattung kommt aus dem Ausland – das kann dauern." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Registrierung und Meldung" }}</p>
+            <p>{{ "Das macht ab 1.7.21 dein Steuerberater.  Allerdings haftet er dann auch. Mal sehen, ob er mitmacht." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Auslandslager" }}</p>
+            <p>{{ "In Ländern, in denen du ein Lager betreibst (z.B. Amazon FBA) ist der OSS ausgeschlossen." }}</p>
+          </li>
+          <li>
+            <p class="medium">{{ "Registrierung und Meldung" }}</p>
+            <p>{{ "Das macht ab 1.7.21 dein Steuerberater.  Allerdings haftet er dann auch. Mal sehen, ob er mitmacht." }}</p>
+          </li>
+        </ul>
       </section>
     </div>
     <!-- oss vs clearvat -->
@@ -217,6 +270,67 @@
         <h2>
           <span>{{ "OSS vs. ClearVAT" }}</span>
         </h2>
+        <table class="comparison offset-left">
+          <tbody>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>{{ "OSS" }}</th>
+            <th>{{ "clearVAT" }}</th>
+          </tr>
+          <tr class="fs-xl">
+            <td class="step medium">{{ "1" }}</td>
+            <td class="title medium">{{ "Tax Rates" }}</td>
+            <td class="description">{{ "Du bekommst die richtigen Steuersätze für deine Artikel" }}</td>
+            <td class="oss icon"><img src="/assets/storybook/icons/icon_x.svg" /></td>
+            <td class="clearvat icon"><img src="/assets/storybook/icons/icon_checkmark-small.svg" /></td>
+          </tr>
+          <tr class="fs-xl">
+            <td class="step medium">{{ "2" }}</td>
+            <td class="title medium">{{ "Tax Assignment" }}</td>
+            <td class="description">{{ "Die Steuersätze werden den Artikeln zugeordnet" }}</td>
+            <td class="oss icon"><img src="/assets/storybook/icons/icon_x.svg" /></td>
+            <td class="clearvat icon"><img src="/assets/storybook/icons/icon_checkmark-small.svg" /></td>
+          </tr>
+          <tr class="fs-xl">
+            <td class="step medium">{{ "3" }}</td>
+            <td class="title medium">{{ "Tax Calculation" }}</td>
+            <td class="description">{{ "Die Steuersätze werden im Checkout je Land richtig ausgewiesen" }}</td>
+            <td class="oss icon"><img src="/assets/storybook/icons/icon_x.svg" /></td>
+            <td class="clearvat icon"><img src="/assets/storybook/icons/icon_checkmark-small.svg" /></td>
+          </tr>
+          <tr class="fs-xl">
+            <td class="step medium">{{ "4" }}</td>
+            <td class="title medium">{{ "Registrieren,"}}<br />{{ "melden und" }}<br />{{ "zahlen" }}</td>
+            <td class="description">{{ "Keine Registrierung mehr nötig."}}<br />{{ "Umsätze automatisiert melden"}}<br />{{ "und die Steuern bezahlen" }}</td>
+            <td class="oss icon">
+              <img src="/assets/storybook/icons/icon_checkmark-small.svg" />
+              <img src="/assets/storybook/icons/icon_x.svg" />
+              <img src="/assets/storybook/icons/icon_checkmark-small.svg" />
+            </td>
+            <td class="clearvat icon">
+              <img src="/assets/storybook/icons/icon_checkmark-small.svg" />
+              <img src="/assets/storybook/icons/icon_checkmark-small.svg" />
+              <img src="/assets/storybook/icons/icon_checkmark-small.svg" />
+            </td>
+          </tr>
+          <tr class="fs-xl">
+            <td class="step medium">{{ "5" }}</td>
+            <td class="title medium">{{ "Reclaim" }}</td>
+            <td class="description">{{ "Du willst schnell deine Erstattungen" }}</td>
+            <td class="oss icon"><img src="/assets/storybook/icons/icon_x.svg" /></td>
+            <td class="clearvat icon"><img src="/assets/storybook/icons/icon_checkmark-small.svg" /></td>
+          </tr>
+          <tr class="fs-xl">
+            <td class="step medium">{{ "6" }}</td>
+            <td class="title medium">{{ "Betriebsprüfung Haftung" }}</td>
+            <td class="description">{{ "Dir wird die Haftung und die Kommunikation mit ausländischen Behörden abgenommen" }}</td>
+            <td class="oss icon"><img src="/assets/storybook/icons/icon_x.svg" /></td>
+            <td class="clearvat icon"><img src="/assets/storybook/icons/icon_checkmark-small.svg" /></td>
+          </tr>
+          </tbody>
+        </table>
       </section>
     </div>
 
@@ -268,27 +382,27 @@ export default {
       },
       heroes: [
         {
-          title: "Colorful summer dresses are already in store",
-          subtitle: "SUMMER COLLECTION 2020",
+          title: "ClearVAT macht unsere EU-Steuern – wir kümmern uns lieber um die Kunst.",
+          subtitle: "Dr. Vanessa Moos, Managing Director",
           buttonText: "Learn more",
           background: "rgb(236, 239, 241)",
-          image: "/assets/storybook/Home/hero.png",
+          image: "/assets/storybook/images/slider-img_fineartmultiple.jpg",
         },
         {
-          title: "Colorful summer dresses are already in store",
-          subtitle: "SUMMER COLLECTION 2020",
+          title: "Banner 2 Title",
+          subtitle: "Banner 2 Subtitle",
           buttonText: "Learn more",
           background: "rgb(239, 235, 233)",
-          image: "/assets/storybook/Home/bannerHM.jpg",
-          className:
-            "sf-hero-item--position-bg-top-left sf-hero-item--align-right",
+          image: "/assets/storybook/images/slider-img_fineartmultiple.jpg",
+          //className:
+          //  "sf-hero-item--position-bg-top-left sf-hero-item--align-right",
         },
         {
-          title: "Colorful summer dresses are already in store",
-          subtitle: "SUMMER COLLECTION 2020",
+          title: "Banner 3 Title",
+          subtitle: "Banner 3 Subtitle",
           buttonText: "Learn more",
           background: "rgb(236, 239, 241)",
-          image: "/assets/storybook/Home/hero.png",
+          image: "/assets/storybook/images/slider-img_fineartmultiple.jpg",
         },
       ],
       banners: [
@@ -454,6 +568,12 @@ section {
   padding-bottom: 240px;
   padding-top: 232px;
 }
+section.offset-y {
+  padding-bottom: 0;
+  padding-top: 112px;
+  position: relative;
+  top: 120px;
+}
 .medium {
   font-family: var(--font-family--secondary);
 }
@@ -480,6 +600,12 @@ section {
 .offset {
   padding: 0 var(--spacer-3xl);
 }
+.offset-left {
+  padding-left: var(--spacer-3xl);
+}
+.offset-right {
+  padding-right: var(--spacer-3xl);
+}
 .cl-accent {
   color: var(--c-primary);
 }
@@ -499,11 +625,13 @@ section {
   top: 20px;
 }
 ul.features,
-ul.checked {
+ul.checked,
+ul.minus {
   list-style-type: none;
 }
 ul.features li,
-ul.checked li {
+ul.checked li,
+ul.minus li {
   padding-bottom: 48px;
   padding-left: 64px;
   position: relative;
@@ -518,8 +646,23 @@ ul.checked li:before {
   left: -48px;
   position: absolute;
 }
+.col-2 {
+  display: grid;
+  grid-gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+ul.minus li {
+  margin-right: 32px;
+}
+ul.minus li:before {
+  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_minus.svg');
+  left: -48px;
+  position: absolute;
+  top: 16px;
+}
 ul.features li p,
-ul.checked li p {
+ul.checked li p,
+ul.minus li p {
   font-size: var(--font-size--xl);
   line-height: 1.325;
   margin: 8px 0;
@@ -559,6 +702,52 @@ div.checked:before {
   content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_arrow-horizontal.svg');
   display: inline-block;
   padding: 0 48px;
+}
+.rounded-img-container {
+  background: url('~@storefront-ui/vue/public/assets/storybook/images/anita-richter_1200.jpg');
+  border-radius: 50% 0 0 50%;
+  height: 720px;
+  overflow: hidden;
+  width: 860px;
+}
+.rounded-img-container img {
+  height: auto;
+  width: 100%;
+}
+table.qa {
+  margin-top: 120px;
+}
+table.qa td {
+  border-bottom: 1px solid var(--c-light);
+  vertical-align: top;
+  padding: 40px 0;
+  &.question {
+    padding-right: 48px;
+  }
+}
+table.comparison .step:before {
+  border-left: 3px solid var(--c-primary);
+  content: " ";
+}
+table.comparison .step {
+  align-items: center;
+  background-color: white;
+  border: 8px solid var(--c-primary);
+  border-radius: 50%;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  margin-right: 32px;
+  width: 80px;
+}
+table.comparison td {
+  border-bottom: 1px solid #BFBFBF;
+  line-height: 1.2;
+  margin: 32px 0;
+}
+table.comparison td.icon img {
+  display: block;
+  padding: 0 24px;
 }
 .hero {
   --hero-item-background-position: center;

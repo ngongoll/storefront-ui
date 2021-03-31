@@ -28,16 +28,6 @@
         />
       </slot>
     </div>
-    <div v-if="numberOfPages > 1" class="sf-hero__bullets">
-      <!--@slot custom markup for pagination bullets -->
-      <slot name="bullets" v-bind="{ numberOfPages, page, go }">
-        <SfBullets
-          :total="numberOfPages"
-          :current="page - 1"
-          @click="go($event)"
-        />
-      </slot>
-    </div>
   </div>
 </template>
 <script>
