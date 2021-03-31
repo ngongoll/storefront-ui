@@ -516,8 +516,6 @@ export default {
           buttonText: "Learn more",
           background: "rgb(239, 235, 233)",
           image: "/assets/storybook/images/slider-img_fineartmultiple.jpg",
-          //className:
-          //  "sf-hero-item--position-bg-top-left sf-hero-item--align-right",
         },
         {
           title: "Banner 3 Title",
