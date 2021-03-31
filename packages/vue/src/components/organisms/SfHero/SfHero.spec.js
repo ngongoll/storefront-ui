@@ -2,8 +2,8 @@ import { shallowMount } from "@vue/test-utils";
 import SfHero from "./SfHero.vue";
 import SfHeroItem from "./_internal/SfHeroItem.vue";
 import SfArrow from "../../atoms/SfArrow/SfArrow.vue";
-import SfButton from "../../atoms/SfButton/SfButton.vue";
-import SfBullets from "../../atoms/SfBullets/SfBullets.vue";
+// import SfButton from "../../atoms/SfButton/SfButton.vue";
+// import SfBullets from "../../atoms/SfBullets/SfBullets.vue";
 const items = [
   {
     title: "title_1",
@@ -66,9 +66,9 @@ describe("SfHero.vue", () => {
     it("renders two SfArrow components", () => {
       expect(component.findAllComponents(SfArrow)).toHaveLength(2);
     });
-    it("renders SfBullets component", () => {
-      expect(component.findAllComponents(SfBullets)).toHaveLength(1);
-    });
+    // it("renders SfBullets component", () => {
+    //   expect(component.findAllComponents(SfBullets)).toHaveLength(1);
+    // });
   });
   describe("with 'prev' and 'next' slots populated", () => {
     let component;
@@ -127,9 +127,9 @@ describe("SfHero.vue", () => {
     it("doesn't render any SfArrow components if only one item passed as prop", () => {
       expect(component.findAllComponents(SfArrow)).toHaveLength(0);
     });
-    it("doesn't render SfBullets component if only one item passed as prop", () => {
-      expect(component.findAllComponents(SfBullets)).toHaveLength(0);
-    });
+    // it("doesn't render SfBullets component if only one item passed as prop", () => {
+    //   expect(component.findAllComponents(SfBullets)).toHaveLength(0);
+    // });
   });
   describe("with using default slot", () => {
     it("renders SfHeroItem component", () => {

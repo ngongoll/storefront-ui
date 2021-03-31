@@ -1,9 +1,9 @@
 import { mount } from "@vue/test-utils";
 import SfHeroItem from "./SfHeroItem.vue";
-import SfButton from "../../../atoms/SfButton/SfButton";
+// import SfButton from "../../../atoms/SfButton/SfButton";
 const title = "title_single";
 const subtitle = "subtitle_single";
-const buttonText = "button_single";
+// const buttonText = "button_single";
 const background = "rgb(236, 239, 241)";
 const image = "https://i.ibb.co/6HS24vc/hero-bg-removebg-preview.png";
 describe("SfHeroItem.vue", () => {
@@ -14,7 +14,7 @@ describe("SfHeroItem.vue", () => {
         propsData: {
           title,
           subtitle,
-          buttonText,
+          // buttonText,
           background,
           image,
         },
@@ -32,9 +32,9 @@ describe("SfHeroItem.vue", () => {
     it("renders subtitle correctly", () => {
       expect(component.text()).toContain(subtitle);
     });
-    it("renders SfButton correctly", () => {
-      expect(component.findComponent(SfButton).text()).toContain(buttonText);
-    });
+    // it("renders SfButton correctly", () => {
+    //   expect(component.findComponent(SfButton).text()).toContain(buttonText);
+    // });
   });
   describe("with items passed through slots", () => {
     let component;
@@ -56,8 +56,8 @@ describe("SfHeroItem.vue", () => {
     it("renders 'subtitle' slot correctly", () => {
       expect(component.text()).toContain(subtitle);
     });
-    it("renders 'call-to-action' slot correctly", () => {
-      expect(component.text()).toContain("halabala");
-    });
+    // it("renders 'call-to-action' slot correctly", () => {
+    //   expect(component.text()).toContain("halabala");
+    // });
   });
 });
