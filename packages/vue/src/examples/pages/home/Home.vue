@@ -7,9 +7,7 @@
           <span class="cl-accent">{{ "Umsatzsteuerfrei liefern" }}</span>
           <span>{{ "Grenzüberschreitend B2C in 30 europäische Länder" }}</span>
         </h1>
-        <SfButton
-            link="#"
-        >
+        <SfButton link="#">
           {{ "Anmelden" }}
         </SfButton>
       </section>
@@ -38,11 +36,19 @@
         <ul class="features offset">
           <li>
             <p class="medium">{{ "Steuerfrei" }}</p>
-            <p>{{ "Deine Ausgangsrechnung zeigt in ganz Europa immer 0% Umsatzsteuer." }}</p>
+            <p>
+              {{
+                "Deine Ausgangsrechnung zeigt in ganz Europa immer 0% Umsatzsteuer."
+              }}
+            </p>
           </li>
           <li>
             <p class="medium">{{ "Haftungsfrei" }}</p>
-            <p>{{ "In deiner Buchhaltung gibt es 0,00 EUR ausländische  Steuerschulden." }}</p>
+            <p>
+              {{
+                "In deiner Buchhaltung gibt es 0,00 EUR ausländische  Steuerschulden."
+              }}
+            </p>
           </li>
           <li>
             <p class="medium">{{ "Registrierungsfrei" }}</p>
@@ -50,11 +56,19 @@
           </li>
           <li>
             <p class="medium">{{ "Betriebsprüfungsfrei" }}</p>
-            <p>{{ "Keine Betriebsprüfungen im Ausland. Die Haftung liegt bei eClear." }}</p>
+            <p>
+              {{
+                "Keine Betriebsprüfungen im Ausland. Die Haftung liegt bei eClear."
+              }}
+            </p>
           </li>
           <li>
             <p class="medium">{{ "Sorgenfrei" }}</p>
-            <p>{{ "Mit Steuersätzen, Ausnahmen und den häufigen Änderungen beschäftigen wir uns. Dein Steuersatz ist immer 0% Umsatzsteuer." }}</p>
+            <p>
+              {{
+                "Mit Steuersätzen, Ausnahmen und den häufigen Änderungen beschäftigen wir uns. Dein Steuersatz ist immer 0% Umsatzsteuer."
+              }}
+            </p>
           </li>
         </ul>
       </section>
@@ -62,17 +76,19 @@
     <!-- slider -->
     <div class="fullwidth-wrapper bg-secondary">
       <section>
-        <h2 class="text-primary"><span>{{ "8’065 Händer sind schon angeschlossen" }}</span></h2>
+        <h2 class="text-primary">
+          <span>{{ "8’065 Händer sind schon angeschlossen" }}</span>
+        </h2>
         <SfHero class="hero">
           <SfHeroItem
-              v-for="(img, index) in heroes"
-              :key="index"
-              :image="img.image"
-              :title="img.title"
-              :subtitle="img.subtitle"
-              :button-text="img.buttonText"
-              :background="img.background"
-              :class="img.className"
+            v-for="(img, index) in heroes"
+            :key="index"
+            :image="img.image"
+            :title="img.title"
+            :subtitle="img.subtitle"
+            :button-text="img.buttonText"
+            :background="img.background"
+            :class="img.className"
           />
         </SfHero>
       </section>
@@ -81,7 +97,8 @@
     <div class="fullwidth-wrapper">
       <section>
         <h2>
-          <span class="text-primary">{{ "Easy register." }}</span><br />
+          <span class="text-primary">{{ "Easy register." }}</span
+          ><br />
           <span>{{ "Einfach ganz Europa" }}</span>
         </h2>
         <div class="steps">
@@ -97,7 +114,9 @@
           <div class="arrow"></div>
           <div class="step step-3">
             <div class="number">{{ "3" }}</div>
-            <div class="label">{{ "Nach ganz" }}<br />{{ "Europa liefern" }}</div>
+            <div class="label">
+              {{ "Nach ganz" }}<br />{{ "Europa liefern" }}
+            </div>
           </div>
         </div>
       </section>
@@ -106,14 +125,14 @@
     <div class="fullwidth-wrapper bg-primary">
       <section>
         <h2>
-          <span>{{ "Wir schaffen die Mehrwertsteuer in Europa ab." }}</span><br />
-          <span class="text-light--variant">{{ "Für eCommerce Händler bei grenz-überschreitenden B2C Lieferungen. " }}</span>
+          <span>{{ "Wir schaffen die Mehrwertsteuer in Europa ab." }}</span
+          ><br />
+          <span class="text-light--variant">{{
+            "Für eCommerce Händler bei grenz-überschreitenden B2C Lieferungen. "
+          }}</span>
         </h2>
         <p class="fs-xl">Du kümmerst dich um’s Geschäft!</p>
-        <SfButton
-            link="#"
-            class="color-light"
-        >
+        <SfButton link="#" class="color-light">
           {{ "Jetzt registrieren" }}
         </SfButton>
       </section>
@@ -122,25 +141,34 @@
     <div class="fullwidth-wrapper">
       <section>
         <h2>
-          <span>{{ "Unser Service – Dein Vorteil" }}</span><br />
+          <span>{{ "Unser Service – Dein Vorteil" }}</span
+          ><br />
           <span class="cl-accent">{{ "Alles inbegriffen" }}</span>
         </h2>
         <div class="sf-banner-grid banner-grid">
-         <div class="sf-banner-grid__row">
-          <div class="sf-banner-grid__col sf-banner-grid__col--medium">
-            <div class="sf-banner__wrapper">
-              <div class="benefits"><span>{{ "Ein Ansprechpartner in deiner Sprache" }}</span></div>
+          <div class="sf-banner-grid__row">
+            <div class="sf-banner-grid__col sf-banner-grid__col--medium">
+              <div class="sf-banner__wrapper">
+                <div class="benefits">
+                  <span>{{ "Ein Ansprechpartner in deiner Sprache" }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="sf-banner-grid__col sf-banner-grid__col--medium">
+              <div class="checked sf-banner__wrapper">
+                {{ "Intrastat Berichte automatisch" }}
+              </div>
             </div>
           </div>
-          <div class="sf-banner-grid__col sf-banner-grid__col--medium">
-            <div class="checked sf-banner__wrapper">{{ "Intrastat Berichte automatisch" }}</div>
-          </div>
-        </div>
         </div>
         <ul class="checked offset">
           <li>
             <p class="medium">{{ "Steuerrückerstattung sofort" }}</p>
-            <p>{{ "Umgehende Erstattung von Steuerbeiträgen durch ausländische Steuerbehörden zum Beispiel bei Retouren." }}</p>
+            <p>
+              {{
+                "Umgehende Erstattung von Steuerbeiträgen durch ausländische Steuerbehörden zum Beispiel bei Retouren."
+              }}
+            </p>
           </li>
           <li>
             <p class="medium">{{ "Ein Ansprechpartner in deiner Sprache" }}</p>
@@ -167,7 +195,8 @@
     <div class="fullwidth-wrapper bg-light">
       <section>
         <h2>
-          <span class="text-primary">{{ "Easy integrate" }}</span><br />
+          <span class="text-primary">{{ "Easy integrate" }}</span
+          ><br />
           <span>{{ "Unsere kostenlosen shop hosting PlugIns und APIs" }}</span>
         </h2>
       </section>
@@ -184,11 +213,15 @@
     <div class="fullwidth-wrapper bg-primary">
       <section>
         <h2>
-          <span class="text-light">{{ "Unsere Expertise" }}</span><br />
+          <span class="text-light">{{ "Unsere Expertise" }}</span
+          ><br />
           <span>{{ "Mehrwertsteuer" }}</span>
         </h2>
         <p class="fs-xl">
-          <span class="medium">{{ "Anita Richter, Syndikus-Steuerberaterin" }}</span><br />
+          <span class="medium">{{
+            "Anita Richter, Syndikus-Steuerberaterin"
+          }}</span
+          ><br />
           <span>{{ "Vice President Tax Technology Innovation" }}</span>
         </p>
       </section>
@@ -197,7 +230,8 @@
     <div class="fullwidth-wrapper">
       <section>
         <h2>
-          <span class="text-primary">{{ "Zertifizierte Sicherheit" }}</span><br />
+          <span class="text-primary">{{ "Zertifizierte Sicherheit" }}</span
+          ><br />
           <span>{{ "für dein Geschäft" }}</span>
         </h2>
       </section>
@@ -206,8 +240,11 @@
     <div class="fullwidth-wrapper bg-light">
       <section>
         <h2>
-          <span class="text-primary">{{ "Der OSS – eine Alternative?" }}</span><br />
-          <span>{{ "Wenn du über den OSS nachdenkst, so solltest du Folgendes wissen:" }}</span>
+          <span class="text-primary">{{ "Der OSS – eine Alternative?" }}</span
+          ><br />
+          <span>{{
+            "Wenn du über den OSS nachdenkst, so solltest du Folgendes wissen:"
+          }}</span>
         </h2>
       </section>
     </div>
@@ -236,17 +273,7 @@
   </div>
 </template>
 <script>
-import {
-  SfButton,
-  SfHero,
-  SfBannerGrid,
-  SfBanner,
-  SfCallToAction,
-  SfSection,
-  SfCarousel,
-  SfProductCard,
-  SfImage,
-} from "@storefront-ui/vue";
+import { SfButton, SfHero, SfBannerGrid, SfBanner } from "@storefront-ui/vue";
 export default {
   name: "Home",
   components: {
@@ -254,11 +281,6 @@ export default {
     SfHero,
     SfBannerGrid,
     SfBanner,
-    SfCallToAction,
-    SfSection,
-    SfCarousel,
-    SfProductCard,
-    SfImage,
   },
   data() {
     return {
@@ -494,7 +516,7 @@ section {
   padding: 0 45px;
 }
 .benefits span:before {
-  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
+  content: url("~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg");
   position: relative;
   top: 20px;
 }
@@ -509,12 +531,12 @@ ul.checked li {
   position: relative;
 }
 ul.features li:before {
-  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_plus.svg');
+  content: url("~@storefront-ui/vue/public/assets/storybook/icons/icon_plus.svg");
   left: -48px;
   position: absolute;
 }
 ul.checked li:before {
-  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
+  content: url("~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg");
   left: -48px;
   position: absolute;
 }
@@ -525,7 +547,7 @@ ul.checked li p {
   margin: 8px 0;
 }
 div.checked:before {
-  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg');
+  content: url("~@storefront-ui/vue/public/assets/storybook/icons/icon_checkmark_large.svg");
 }
 .steps {
   display: flex;
@@ -556,7 +578,7 @@ div.checked:before {
   font-size: var(--font-size--xl);
 }
 .steps .arrow {
-  content: url('~@storefront-ui/vue/public/assets/storybook/icons/icon_arrow-horizontal.svg');
+  content: url("~@storefront-ui/vue/public/assets/storybook/icons/icon_arrow-horizontal.svg");
   display: inline-block;
   padding: 0 48px;
 }
