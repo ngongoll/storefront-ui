@@ -33,7 +33,8 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   data() {
     return {
-      title: "ClearVAT macht unsere EU-Steuern – wir kümmern uns lieber um die Kunst.",
+      title:
+        "ClearVAT macht unsere EU-Steuern – wir kümmern uns lieber um die Kunst.",
       image: "/assets/storybook/images/slider-img_fineartmultiple.jpg",
       subtitle: "Dr. Vanessa Moos, Managing Director",
       buttonText: "Learn more",

@@ -34,14 +34,14 @@
 import Vue from "vue";
 import SfHeroItem from "./_internal/SfHeroItem.vue";
 import SfArrow from "../../atoms/SfArrow/SfArrow.vue";
-import SfBullets from "../../atoms/SfBullets/SfBullets.vue";
+//import SfBullets from "../../atoms/SfBullets/SfBullets.vue";
 import Glide from "@glidejs/glide";
 Vue.component("SfHeroItem", SfHeroItem);
 export default {
   name: "SfHero",
   components: {
     SfArrow,
-    SfBullets,
+    //SfBullets,
   },
   props: {
     /**

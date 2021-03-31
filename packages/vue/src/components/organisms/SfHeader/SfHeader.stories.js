@@ -115,7 +115,7 @@ const Template = (args, { argTypes }) => ({
   data() {
     return {
       navigationItems: ["Lösungen", "Integration", "Preise", "Q+A", "OSS"],
-      searchValues: ""
+      searchValues: "",
     };
   },
   template: `
