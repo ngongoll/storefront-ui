@@ -118,7 +118,9 @@ button.sf-button:hover {
   }
 }
 .sf-header {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   &__wrapper {
     position: var(--header-wrapper-position);
     z-index: var(--header-wrapper-z-index, 1);
@@ -126,7 +128,7 @@ button.sf-button:hover {
     background: var(--header-background, #ffffff);
     transition: var(--header-wrapper-transition, transform 150ms ease-in-out);
     transform: var(--header-wrapper-transform);
-    box-shadow: var(--header-box-shadow);
+    box-shadow: 0 4px 8px 0px  rgba(0, 0, 0, 0.1);
   }
   &__header {
     display: flex;
