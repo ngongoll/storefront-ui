@@ -515,7 +515,9 @@
               <th>{{ "clearVAT" }}</th>
             </tr>
             <tr class="fs-xl">
-              <td class="step medium">{{ "1" }}</td>
+              <td class="step medium">
+                <span>{{ "1" }}</span>
+              </td>
               <td class="title medium">{{ "Tax Rates" }}</td>
               <td class="description">
                 {{ "Du bekommst die richtigen Steuersätze für deine Artikel" }}
@@ -528,7 +530,9 @@
               </td>
             </tr>
             <tr class="fs-xl">
-              <td class="step medium">{{ "2" }}</td>
+              <td class="step medium">
+                <span>{{ "2" }}</span>
+              </td>
               <td class="title medium">{{ "Tax Assignment" }}</td>
               <td class="description">
                 {{ "Die Steuersätze werden den Artikeln zugeordnet" }}
@@ -541,7 +545,9 @@
               </td>
             </tr>
             <tr class="fs-xl">
-              <td class="step medium">{{ "3" }}</td>
+              <td class="step medium">
+                <span>{{ "3" }}</span>
+              </td>
               <td class="title medium">{{ "Tax Calculation" }}</td>
               <td class="description">
                 {{
@@ -556,7 +562,9 @@
               </td>
             </tr>
             <tr class="fs-xl">
-              <td class="step medium">{{ "4" }}</td>
+              <td class="step medium">
+                <span>{{ "4" }}</span>
+              </td>
               <td class="title medium">
                 {{ "Registrieren," }}<br />{{ "melden und" }}<br />{{
                   "zahlen"
@@ -579,7 +587,9 @@
               </td>
             </tr>
             <tr class="fs-xl">
-              <td class="step medium">{{ "5" }}</td>
+              <td class="step medium">
+                <span>{{ "5" }}</span>
+              </td>
               <td class="title medium">{{ "Reclaim" }}</td>
               <td class="description">
                 {{ "Du willst schnell deine Erstattungen" }}
@@ -592,7 +602,9 @@
               </td>
             </tr>
             <tr class="fs-xl">
-              <td class="step last medium">{{ "6" }}</td>
+              <td class="step last medium">
+                <span>{{ "6" }}</span>
+              </td>
               <td class="title medium">{{ "Betriebsprüfung Haftung" }}</td>
               <td class="description">
                 {{
@@ -1021,6 +1033,9 @@ table.comparison .step {
   justify-content: center;
   margin-right: 32px;
   width: 80px;
+}
+table.comparison .step span {
+  padding-top: 4px;
 }
 table.comparison td,
 table.preise td {
