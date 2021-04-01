@@ -185,6 +185,47 @@
           ><br />
           <span>{{ "Unsere kostenlosen shop hosting PlugIns und APIs" }}</span>
         </h2>
+        <div class="offset-left col-2">
+          <div>
+            <h3 class="fs-xl regular">{{ "PlugIn und Integrations" }}</h3>
+            <div class="producttiles">
+              <div class="tile">
+                <img
+                  src="~@storefront-ui/vue/public/assets/storybook/images/210224_Kacheln_800x800_Ing_final112.png"
+                  width="100%"
+                  height="auto"
+                />
+              </div>
+              <div class="tile">
+                <img
+                  src="~@storefront-ui/vue/public/assets/storybook/images/210224_Kacheln_800x800_Ing_final112.png"
+                  width="100%"
+                  height="auto"
+                />
+              </div>
+            </div>
+            <div>{{ "API System Beschreibung verfügbar" }}</div>
+          </div>
+          <div>
+            <h3 class="fs-xl regular">{{ "APIs" }}</h3>
+            <div class="producttiles">
+              <div class="tile">
+                <img
+                  src="~@storefront-ui/vue/public/assets/storybook/images/210224_Kacheln_800x800_Ing_final117.png"
+                  width="100%"
+                  height="auto"
+                />
+              </div>
+              <div class="tile">
+                <img
+                  src="~@storefront-ui/vue/public/assets/storybook/images/210224_Kacheln_800x800_Ing_final117.png"
+                  width="100%"
+                  height="auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
     <!-- preise -->
@@ -193,6 +234,66 @@
         <h2>
           <span>{{ "Preise" }}</span>
         </h2>
+        <table class="preise offset-left">
+          <tbody>
+            <tr class="fs-xl">
+              <td class="title medium">{{ "PlugIn + APIs" }}</td>
+              <td class="description cl-accent">
+                {{ "Bei uns kostenlos" }}
+              </td>
+            </tr>
+            <tr class="fs-xl">
+              <td class="title medium">{{ "Datev Schnittstelle" }}</td>
+              <td class="description cl-accent">
+                {{ "Bei uns inklusive" }}
+              </td>
+            </tr>
+            <tr class="fs-xl">
+              <td class="title medium">
+                {{ "Onboarding einmalig" }}<br />{{ "EU-27" }}
+              </td>
+              <td class="description">
+                <div class="inner-row">
+                  {{ "Bis 2000 SKUs" }}<br />{{ "890,00 EUR" }}
+                </div>
+                <hr />
+                <div class="inner-row">
+                  {{ "Je weitere 1000 SKUs" }}<br />{{ "240,00 EUR" }}
+                </div>
+                <hr />
+                <div class="inner-row last">
+                  {{ "Artikelvarianten gelten" }}<br />{{ "als 1 Artikel" }}
+                </div>
+              </td>
+            </tr>
+            <tr class="fs-xl">
+              <td class="title medium">
+                {{ "Einreihung" }}<br />{{ "Artikelzuordnung" }}<br />{{
+                  "(Assignment)"
+                }}
+              </td>
+              <td class="description cl-accent">
+                {{ "Bei uns inklusive" }}
+              </td>
+            </tr>
+            <tr class="fs-xl">
+              <td class="title medium">
+                {{ "Aufschlag Onboardung" }}<br />{{ "Großbritannien" }}<br />{{
+                  "Schweiz"
+                }}
+              </td>
+              <td class="description">{{ "UK 150%" }}<br />{{ "CH 150%" }}</td>
+            </tr>
+            <tr class="fs-xl">
+              <td class="title medium">
+                {{ "Transaktionsgebühr" }}<br />{{ "auf GMV" }}
+              </td>
+              <td class="description">
+                {{ "1.25 – 4.75%" }}<br />{{ "gem. Angebot" }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
     <!-- expertise -->
@@ -302,6 +403,46 @@
           ><br />
           <span>{{ "für dein Geschäft" }}</span>
         </h2>
+        <div class="col-4">
+          <div class="certification">
+            <img
+              src="~@storefront-ui/vue/public/assets/storybook/images/logo_bafin.png"
+            />
+            <p>
+              {{
+                "Wir sind ein EU-weit reguliertes Zahlungsinstitut und Acquirer nach ZAG."
+              }}
+            </p>
+          </div>
+          <div class="certification">
+            <img
+              src="~@storefront-ui/vue/public/assets/storybook/images/logo_lbdo.png"
+            />
+            <p>
+              {{
+                "Die Buchhaltungssysteme (GoB), Steuerlogik und die gesamte Software von ClearVAT sind nach Prüfungsstandard 880 des Institutes der Wirtschaftprüfer zertifiziert."
+              }}
+            </p>
+          </div>
+          <div class="certification">
+            <img
+              src="~@storefront-ui/vue/public/assets/storybook/images/logo_sap.png"
+            />
+            <p>
+              {{ "Wir arbeiten auf  SAP S4/HANA und sind SAP zertifiziert." }}
+            </p>
+          </div>
+          <div class="certification">
+            <img
+              src="~@storefront-ui/vue/public/assets/storybook/images/logo_sap-certified.png"
+            />
+            <p>
+              {{
+                "Auf dem neusten SAP S4/HANA Coresystem mit der hochperformanten In-Memory Database Technologie sowie SAP zertifiziert."
+              }}
+            </p>
+          </div>
+        </div>
       </section>
     </div>
     <!-- oss -->
@@ -451,7 +592,7 @@
               </td>
             </tr>
             <tr class="fs-xl">
-              <td class="step medium">{{ "6" }}</td>
+              <td class="step last medium">{{ "6" }}</td>
               <td class="title medium">{{ "Betriebsprüfung Haftung" }}</td>
               <td class="description">
                 {{
@@ -469,31 +610,15 @@
         </table>
       </section>
     </div>
-
-    <SfBannerGrid class="banner-grid">
-      <template v-for="banner in banners" #[banner.slot]>
-        <SfBanner
-          :key="banner.slot"
-          :title="banner.title"
-          :subtitle="banner.subtitle"
-          :description="banner.description"
-          :button-text="banner.buttonText"
-          :image="banner.image"
-          :class="banner.class"
-        />
-      </template>
-    </SfBannerGrid>
   </div>
 </template>
 <script>
-import { SfButton, SfHero, SfBannerGrid, SfBanner } from "@storefront-ui/vue";
+import { SfButton, SfHero } from "@storefront-ui/vue";
 export default {
   name: "Home",
   components: {
     SfButton,
     SfHero,
-    SfBannerGrid,
-    SfBanner,
   },
   data() {
     return {
@@ -697,6 +822,9 @@ section.offset-y {
 .medium {
   font-family: var(--font-family--secondary);
 }
+.regular {
+  font-family: var(--font-family--primary);
+}
 .fullwidth-bg {
   background: #cc0000;
   width: 100%;
@@ -771,6 +899,11 @@ ul.checked li:before {
   grid-gap: 32px;
   grid-template-columns: repeat(2, 1fr);
 }
+.col-4 {
+  display: grid;
+  grid-gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+}
 ul.minus li {
   margin-right: 32px;
 }
@@ -823,6 +956,21 @@ div.checked:before {
   display: inline-block;
   padding: 0 48px;
 }
+.producttiles {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 120px;
+}
+.producttiles .tile {
+  background: var(--c-secondary-variant);
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  height: 160px;
+  margin-right: 32px;
+  overflow: hidden;
+  width: 160px;
+}
 .rounded-img-container {
   background: url("~@storefront-ui/vue/public/assets/storybook/images/anita-richter_1200.jpg");
   border-radius: 50% 0 0 50%;
@@ -845,9 +993,23 @@ table.qa td {
     padding-right: 48px;
   }
 }
+table.comparison,
+table.preise {
+  width: 100%;
+}
 table.comparison .step:before {
   border-left: 3px solid var(--c-primary);
-  content: " ";
+  content: "";
+  display: block;
+  height: 100px;
+  left: 13%;
+  position: relative;
+  top: 100%;
+  z-index: -999;
+}
+table.comparison .step.last:before {
+  border-left: none;
+  content: "";
 }
 table.comparison .step {
   align-items: center;
@@ -860,10 +1022,24 @@ table.comparison .step {
   margin-right: 32px;
   width: 80px;
 }
-table.comparison td {
+table.comparison td,
+table.preise td {
   border-bottom: 1px solid #bfbfbf;
   line-height: 1.2;
   margin: 32px 0;
+}
+table.preise hr {
+  border: none;
+  border-top: 1px solid #bfbfbf;
+}
+table.preise div.inner-row {
+}
+table.preise div.inner-row.last {
+  border-bottom: none;
+}
+table.preise td {
+  padding: 32px 0;
+  vertical-align: top;
 }
 table.comparison td.icon img {
   display: block;
