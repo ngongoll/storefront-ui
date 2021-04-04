@@ -468,6 +468,9 @@ export default {
     @include for-desktop {
       flex-direction: row;
       justify-content: space-between;
+      & > * + * {
+        margin-top: 0;
+      }
     }
   }
   &__login {
