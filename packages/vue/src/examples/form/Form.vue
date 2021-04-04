@@ -1,155 +1,230 @@
 <template>
   <div id="form-template">
     <form class="form">
-      <SfComponentSelect
-        v-model="anrede"
-        label="Anrede"
-        class="form__element form__element--half form__select"
-        error-message="Wähen Sie Ihre Anrede."
-        @blur="anredeBlur = false"
-      >
-        <SfComponentSelectOption
-          v-for="anredeOption in anredeOptions"
-          :key="anredeOption"
-          :value="anredeOption"
+      <h3 class="form__header">
+        <span>{{ "Was brauchst Du?" }}</span>
+      </h3>
+      <div class="form__radios">
+        <SfRadio
+          name="eu-27"
+          value="eu-27"
+          label="EU-27"
+          details=""
+          description=""
+        />
+        <SfRadio
+          name="schweiz"
+          value="schweiz"
+          label="Schweiz"
+          details=""
+          description=""
+        />
+        <SfRadio name="uk" value="uk" label="UK" details="" description="" />
+      </div>
+      <h3 class="form__header">
+        <span>{{ "Das brauchen wir" }}</span>
+      </h3>
+      <div class="form__group">
+        <SfComponentSelect
+          v-model="anrede"
+          label="Anrede"
+          class="form__element form__select col--span-3"
+          error-message="Pflichtfeld"
+          @blur="anredeBlur = false"
         >
-          {{ anredeOption }}
-        </SfComponentSelectOption>
-      </SfComponentSelect>
-      <SfInput
-        v-model="titel"
-        label="Titel"
-        name="firstName"
-        class="form__element form__element--half form__element--half-even"
-        :valid="firstNameBlur || validFirstName(firstName)"
-        error-message="Please type your name"
-        @blur="firstNameBlur = false"
-      />
-      <SfInput
-        v-model="firstName"
-        label="Vorname"
-        name="firstName"
-        class="form__element form__element--half"
-        required
-        :valid="firstNameBlur || validFirstName(firstName)"
-        error-message="Please type your name"
-        @blur="firstNameBlur = false"
-      />
-      <SfInput
-        v-model="lastName"
-        label="Last name"
-        name="lastName"
-        class="form__element form__element--half form__element--half-even"
-        required
-        :valid="lastNameBlur || validLastName(lastName)"
-        error-message="Please type your last name. Your name should have at least one character."
-        @blur="lastNameBlur = false"
-      />
-      <SfInput
-        v-model="streetName"
-        label="Street name"
-        name="streetName"
-        class="form__element form__element--half"
-        required
-        :valid="streetNameBlur || validStreetName(streetName)"
-        error-message="Please type your street name"
-        @blur="streetNameBlur = false"
-      />
-      <SfInput
-        v-model="apartment"
-        label="House/Apartment number"
-        type="number"
-        name="apartment"
-        class="form__element form__element--half form__element--half-even"
-        required
-        :valid="apartmentBlur || validApartment(apartment)"
-        error-message="Please type your apartment/house number."
-        @blur="apartmentBlur = false"
-      />
-      <SfInput
-        v-model="city"
-        label="City"
-        name="city"
-        class="form__element"
-        required
-        :valid="cityBlur || validCity(city)"
-        error-message="Please type your city."
-        @blur="cityBlur = false"
-      />
-      <SfInput
-        v-model="zipCode"
-        label="Zip-code"
-        name="zipCode"
-        type="number"
-        class="form__element form__element--half"
-        required
-        :valid="zipCodeBlur || validZipCode(zipCode)"
-        error-message="Please type your zip code. Zipcode should have only numbers."
-        @blur="zipCodeBlur = false"
-      />
-      <SfComponentSelect
-        v-model="country"
-        label="Country"
-        class="form__element form__element--half form__element--half-even form__select sf-component-select--underlined"
-        required
-        :valid="countryBlur || validCountry(country)"
-        error-message="Please choose your country."
-        @blur="countryBlur = false"
-      >
-        <SfComponentSelectOption
-          v-for="countryOption in countries"
-          :key="countryOption"
-          :value="countryOption"
+          <SfComponentSelectOption
+            v-for="anredeOption in anredeOptions"
+            :key="anredeOption"
+            :value="anredeOption"
+          >
+            {{ anredeOption }}
+          </SfComponentSelectOption>
+        </SfComponentSelect>
+        <SfComponentSelect
+          v-model="titel"
+          label="Titel"
+          class="form__element form__select col--span-3"
+          error-message="Pflichtfeld"
+          @blur="titelBlur = false"
         >
-          {{ countryOption }}
-        </SfComponentSelectOption>
-      </SfComponentSelect>
-      <SfInput
-        v-model="phoneNumber"
-        label="Phone number"
-        name="phone"
-        type="number"
-        class="form__element form__element--half"
-        required
-        :valid="phoneNumberBlur || validPhoneNumber(phoneNumber)"
-        error-message="Please type your phone number."
-        @blur="phoneNumberBlur = false"
-      />
-      <SfInput
-        v-model="email"
-        label="Email"
-        name="email"
-        class="form__element form__element--half form__element--half-even"
-        required
-        :valid="emailBlur || validEmail(email)"
-        error-message="Please choose your country."
-        @blur="emailBlur = false"
-      />
-      <SfTextarea
-        v-model="message"
-        class="form__element"
-        label="Message"
-        name="message"
-        cols="80"
-        rows="25"
-        maxlength="400"
-        minlength="10"
-        wrap="soft"
-        :readonly="true"
-        placeholder="type a message"
-        required
-        :valid="messageBlur || validMessage(message)"
-        error-message="Please type minimum 10 characters and maximum 400."
-        @blur="messageBlur = false"
-      >
-      </SfTextarea>
+          <SfComponentSelectOption
+            v-for="titelOption in titelOptions"
+            :key="titelOption"
+            :value="titelOption"
+          >
+            {{ titelOption }}
+          </SfComponentSelectOption>
+        </SfComponentSelect>
+        <SfInput
+          v-model="firstName"
+          label="Vorname"
+          name="firstName"
+          class="form__element col--span-3"
+          required
+          :valid="firstNameBlur || validFirstName(firstName)"
+          error-message="Pflichtfeld"
+          @blur="firstNameBlur = false"
+        />
+        <SfInput
+          v-model="lastName"
+          label="Name"
+          name="lastName"
+          class="form__element col--span-3"
+          required
+          :valid="lastNameBlur || validLastName(lastName)"
+          error-message="Pflichtfeld"
+          @blur="lastNameBlur = false"
+        />
+        <SfInput
+          v-model="email"
+          label="E-Mail"
+          name="email"
+          class="form__element col--span-3"
+          required
+          :valid="emailBlur || validEmail(email)"
+          error-message="Pflichtfeld"
+          @blur="emailBlur = false"
+        />
+        <SfInput
+          v-model="password"
+          label="Passwort"
+          name="password"
+          type="password"
+          class="form__element col--span-3"
+          required
+          :valid="passwordBlur || validLastName(password)"
+          error-message="Pflichtfeld"
+          @blur="password = false"
+        />
+      </div>
+      <div class="form__group">
+        <SfInput
+          v-model="companyName"
+          label="Firma"
+          name="companyName"
+          class="form__element col--span-3"
+          required
+          :valid="companyNameBlur || validStreetName(companyName)"
+          error-message="Pflichtfeld"
+          @blur="companyNameBlur = false"
+        />
+        <SfInput
+          v-model="companyUrl"
+          label="Webpräsenz"
+          name="companyUrl"
+          class="form__element col--span-3"
+          required
+          :valid="companyUrlBlur || validStreetName(companyUrl)"
+          error-message="Pflichtfeld"
+          @blur="companyUrlBlur = false"
+        />
+        <SfComponentSelect
+          v-model="country"
+          label="Country"
+          class="form__element form__select col--span-3"
+          required
+          :valid="countryBlur || validCountry(country)"
+          error-message="Pflichtfeld"
+          @blur="countryBlur = false"
+        >
+          <SfComponentSelectOption
+            v-for="countryOption in countries"
+            :key="countryOption"
+            :value="countryOption"
+          >
+            {{ countryOption }}
+          </SfComponentSelectOption>
+        </SfComponentSelect>
+        <SfInput
+          v-model="zipCode"
+          label="PLZ"
+          name="zipCode"
+          type="number"
+          class="form__element"
+          required
+          :valid="zipCodeBlur || validZipCode(zipCode)"
+          error-message="Pflichtfeld"
+          @blur="zipCodeBlur = false"
+        />
+        <SfInput
+          v-model="city"
+          label="Ort"
+          name="city"
+          class="form__element col--span-2"
+          required
+          :valid="cityBlur || validCity(city)"
+          error-message="Pflichtfeld"
+          @blur="cityBlur = false"
+        />
+        <SfInput
+          v-model="hrb"
+          label="HRB"
+          type="number"
+          name="hrb"
+          class="form__element col--span-3"
+          required
+          :valid="hrbBlur || validApartment(hrb)"
+          error-message="Pflichtfeld"
+          @blur="hrbBlur = false"
+        />
+        <SfInput
+          v-model="register"
+          label="Register"
+          name="register"
+          type="number"
+          class="form__element col--span-3"
+          required
+          :valid="registerBlur || validPhoneNumber(register)"
+          error-message="Pflichtfeld"
+          @blur="registerBlur = false"
+        />
+        <SfInput
+          v-model="shopSystem"
+          label="Shopsystem"
+          name="shopSystem"
+          class="form__element col--span-3"
+          required
+          :valid="shopSystemBlur || validCity(shopSystem)"
+          error-message="Pflichtfeld"
+          @blur="shopSystemBlur = false"
+        />
+        <SfInput
+          v-model="erp"
+          label="ERP/Saas ERP"
+          name="erp"
+          class="form__element col--span-3"
+          required
+          :valid="erpBlur || validCity(erp)"
+          error-message="Pflichtfeld"
+          @blur="erpBlur = false"
+        />
+        <SfInput
+          v-model="numberArticles"
+          label="Anzahl Artikel"
+          name="numberArticles"
+          type="number"
+          class="form__element col--span-full"
+          required
+          :valid="numberArticlesBlur || validPhoneNumber(numberArticles)"
+          error-message="Pflichtfeld"
+          @blur="numberArticlesBlur = false"
+        />
+      </div>
       <div class="form__action">
-        <SfButton type="submit" @click.prevent="submit">Submit</SfButton>
         <SfButton
-          class="sf-button--text form__action-button form__action-button--secondary"
-          @click="reset"
-          >Reset</SfButton
-        >
+          type="submit"
+          class="sf-button form__action-button--lg"
+          @click.prevent="submit"
+          >Jetzt Kundenkonto anlegen
+        </SfButton>
+        <div class="form__login">
+          <p>Hast Du schon einen Account?</p>
+          <SfButton
+            class="sf-button color-light form__action-button form__action-button--secondary"
+            @click="reset"
+            >Einloggen
+          </SfButton>
+        </div>
       </div>
     </form>
   </div>
@@ -160,6 +235,7 @@ import {
   SfComponentSelect,
   SfButton,
   SfTextarea,
+  SfRadio,
 } from "@storefront-ui/vue";
 export default {
   name: "Default",
@@ -168,6 +244,7 @@ export default {
     SfInput,
     SfComponentSelect,
     SfTextarea,
+    SfRadio,
   },
   data() {
     return {
@@ -179,8 +256,8 @@ export default {
       lastNameBlur: true,
       streetName: "",
       streetNameBlur: true,
-      apartment: "",
-      apartmentBlur: true,
+      hrb: "",
+      hrbBlur: true,
       city: "",
       cityBlur: true,
       state: "",
@@ -191,11 +268,26 @@ export default {
       countryBlur: true,
       anrede: "",
       anredeBlur: true,
-      phoneNumber: "",
-      phoneNumberBlur: true,
+      titel: "",
+      titelBlur: true,
+      password: "",
+      passwordBlur: true,
+      register: "",
+      registerBlur: true,
+      companyName: "",
+      companyNameBlur: true,
+      companyUrl: "",
+      companyUrlBlur: true,
+      shopSystem: "",
+      shopSystemBlur: true,
+      erp: "",
+      erpBlur: true,
+      numberArticles: "",
+      numberArticlesBlur: true,
       email: "",
       emailBlur: true,
       anredeOptions: ["–––", "Frau", "Herr"],
+      titelOptions: ["–––", "Prof.", "Dr."],
       countries: [
         "Austria",
         "Azerbaijan",
@@ -254,24 +346,29 @@ export default {
       this.firstNameBlur = false;
       this.lastNameBlur = false;
       this.streetNameBlur = false;
-      this.apartmentBlur = false;
+      this.hrbBlur = false;
       this.cityBlur = false;
       this.zipCodeBlur = false;
       this.countryBlur = false;
-      this.phoneNumberBlur = false;
+      this.registerBlur = false;
       this.emailBlur = false;
+      this.companyNameBlur = false;
+      this.companyUrlBlur = false;
+      this.shopSystemBlur = false;
+      this.erpBlur = false;
+      this.numberArticlesBlur = false;
+      this.passwordBlur = false;
       this.messageBlur = false;
       if (
         this.validEmail(this.email) &&
-        this.validPhoneNumber(this.phoneNumber) &&
+        this.validPhoneNumber(this.register) &&
         this.validFirstName(this.firstName) &&
         this.validLastName(this.lastName) &&
         this.validStreetName(this.streetName) &&
-        this.validApartment(this.apartment) &&
+        this.validApartment(this.hrb) &&
         this.validCity(this.city) &&
         this.validZipCode(this.zipCode) &&
-        this.validCountry(this.country) &&
-        this.validMessage(this.message)
+        this.validCountry(this.country)
       ) {
         this.valid = true;
       }
@@ -285,9 +382,9 @@ export default {
     validStreetName(streetName) {
       return streetName.length > 2;
     },
-    validApartment(apartment) {
+    validApartment(hrb) {
       const regex = /^[0-9]/;
-      return regex.test(apartment);
+      return regex.test(hrb);
     },
     validCity(city) {
       return !!city && city.length > 2;
@@ -318,15 +415,17 @@ export default {
     },
     reset() {
       this.email = "";
-      this.phoneNumber = "";
+      this.register = "";
       this.zipCode = "";
       this.country = "";
       this.streetName = "";
       this.city = "";
       this.lastName = "";
       this.firstName = "";
-      this.apartment = "";
+      this.hrb = "";
       this.message = "";
+      this.titel = "";
+      this.anrede = "";
     },
   },
 };
@@ -343,47 +442,65 @@ export default {
   }
 }
 .form {
-  padding: var(--spacer-sm) 0;
+  display: grid;
+  grid-gap: var(--spacer-lg);
+  &__radios {
+    display: flex;
+    & > * + * {
+      margin-left: var(--spacer-xl);
+    }
+  }
   &__group {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 100%;
+    @include for-desktop {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__action {
     display: flex;
-    align-items: flex-start;
-  }
-  &__action-button {
-    &:first-child {
-      margin: var(--spacer-sm) 0 0 0;
+    flex-direction: column;
+    align-items: center;
+    & > * + * {
+      margin-top: var(--spacer-sm);
     }
-    &--secondary {
-      margin: var(--spacer-sm) 0 var(--spacer-sm) var(--spacer-base);
+    @include for-desktop {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
-  &__button {
-    --button-width: 100%;
-  }
-  @include for-desktop {
+  &__login {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 0 var(--spacer-2xl) 0 0;
-    &:last-of-type {
-      margin: 0 calc(var(--spacer-2xl) - var(--spacer-sm)) 0 0;
+    & > * + * {
+      margin-left: var(--spacer-sm);
     }
-    &__element {
-      margin: 0 0 var(--spacer-sm) 0;
-      flex: 0 0 100%;
-      &--half {
-        flex: 1 1 50%;
-        &-even {
-          padding: 0 0 0 var(--spacer-xl);
-        }
-      }
+  }
+  &__action-button--lg {
+    padding: var(--spacer-base) var(--spacer-xl);
+  }
+  &__header {
+    font-family: var(--font-primary);
+    font-size: var(--font-size--lg);
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+}
+.col {
+  &--span-2 {
+    grid-column: 1 / -1;
+    @include for-desktop {
+      grid-column: span 2;
     }
-    &__action {
-      flex: 0 0 100%;
-      display: flex;
+  }
+  &--span-3 {
+    grid-column: 1 / -1;
+    @include for-desktop {
+      grid-column: span 3;
     }
-    &__button {
-      --button-width: auto;
-    }
+  }
+  &--span-full {
+    grid-column: 1 / -1;
   }
 }
 </style>

@@ -1,11 +1,5 @@
 @import "../../helpers";
-:root {
-  --input-background: var(--c-primary-variant);
-  --input-padding: 1.6rem 1.6rem;
-  --input-label-padding: 0.6rem 1.6rem;
-  --input-label-background: transparent;
-  --input-label-color: var(--c-dark);
-}
+
 .sf-input {
   position: relative;
   box-sizing: border-box;
@@ -49,32 +43,13 @@
       var(--font-family--primary)
     );
   }
-  &__bar {
-    position: relative;
-    display: var(--input-bar-display, block);
-    &::before,
-    &::after {
-      position: absolute;
-      bottom: 0;
-      width: var(--input-bar-width, 0);
-      height: 1px;
-      background: var(--input-bar-background, var(--c-primary));
-      transition: width 150ms linear;
-      content: "";
-    }
-    &::before {
-      left: 50%;
-    }
-    &::after {
-      right: 50%;
-    }
-  }
+
   &__error-message {
     color: var(--input-error-message-color, var(--c-danger));
     min-height: calc(var(--font-size--xs) * 1.2);
     position: absolute;
-    bottom: 0.3rem;
-    right: 0.3rem;
+    bottom: var(--form-field-error-bottom);
+    right: var(--form-field-error-right);
     @include font(
       --input-error-message-font,
       var(--font-weight--medium),
@@ -122,7 +97,6 @@
         --input-background-color: var(--c-primary);
         --input-label-top: 1rem;
         --input-label-font-size: var(--font-size--xs);
-        // --input-bar-width: 50%;
         --input-error-message-color: var(--c-primary);
       }
     }
@@ -184,12 +158,12 @@
     }
   }
   &.invalid {
-    --input-label-color: var(--c-danger);
+    --input-label-color: var(--c-text);
     input {
       &:focus {
         & ~ * {
           --input-bar-background: var(--c-danger);
-          --input-label-color: var(--c-danger);
+          --input-label-color: var(--c-text);
         }
       }
     }

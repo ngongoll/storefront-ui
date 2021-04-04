@@ -20,12 +20,7 @@
     box-sizing: border-box;
     width: var(--radio-checkmark-size, 1.5rem);
     height: var(--radio-checkmark-size, 1.5rem);
-    @include border(
-      --radio-checkmark-border,
-      1px,
-      solid,
-      var(--c-gray-variant)
-    );
+    @include border(--radio-checkmark-border, 4px, solid, var(--c-primary));
     border-radius: var(--radio-checkmark-border-radius, 100%);
     transition: var(
       --radio-checkmark-transition,
@@ -55,10 +50,6 @@
     display: var(--radio-container-display, flex);
     align-items: var(--radio-container-align-items);
     flex: 1;
-    padding: var(
-      --radio-container-padding,
-      var(--spacer-sm) var(--spacer-lg) var(--spacer-sm) var(--spacer-sm)
-    );
     cursor: var(--radio-container-cursor, pointer);
   }
   &:hover {
@@ -94,7 +85,7 @@
     background: var(--radio-background, var(--c-light));
   }
   &.is-disabled {
-    --radio-checkmark-border-color:  var(--c-text-disabled);
+    --radio-checkmark-border-color: var(--c-text-disabled);
     --radio-details-color: var(--c-text-disabled);
     --radio-description-margin: var(--c-text-disabled);
     --radio-label-color: var(--c-text-disabled);

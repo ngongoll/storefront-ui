@@ -20,7 +20,6 @@
         :type="inputType"
         v-on="listeners"
       />
-      <span class="sf-input__bar"></span>
       <label class="sf-input__label" :for="name">
         <!-- @slot Custom input label -->
         <slot name="label" v-bind="{ label }">{{ label }}</slot>

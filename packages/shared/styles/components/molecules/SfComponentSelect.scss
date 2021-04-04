@@ -1,38 +1,25 @@
 @import "../../helpers";
-:root {
-  --component-select-padding: 0 1.6rem;
-  --component-select-selected-padding: 0;
-  --component-select-option-background: var(--c-light);
-  --component-select-background: var(--c-primary-variant);
-}
 .sf-component-select-option {
   display: flex;
   box-sizing: border-box;
-  @include border(
-    --component-select-option-border,
-    1px 0 0 0,
-    solid,
-    var(--c-light)
-  );
+  align-items: center;
+  padding: 0 var(--component-select-padding);
   background: var(--component-select-option-background);
   color: inherit;
-  min-height: var(
-    --component-select-height,
-    calc(
-      var(--spacer-base) + var(--spacer-2xs) +
-        var(--component-select-label-font-size, var(--font-size--lg))
-    )
-  );
-  @include font(
-    --component-select-option-font,
-    var(--font-weight--light),
-    var(--font-size--sm),
-    1.2,
-    var(--font-family--primary)
-  );
+  min-height: var(--component-select-height);
+
+  &:not(:first-child) {
+    @include border(
+      --component-select-option-border,
+      1px 0 0 0,
+      solid,
+      var(--c-dark)
+    );
+  }
   &.is-active {
     --component-select-option-background: var(--c-light);
   }
+
   @include for-desktop {
     --component-select-option-padding: var(--spacer-xs);
     &:hover {
@@ -45,14 +32,13 @@
   box-sizing: border-box;
   width: var(--component-select-width);
   height: var(--component-select-height);
-  padding: var(--component-select-padding);
   color: var(--component-select-color, var(--c-text));
   background-color: var(--component-select-background);
   cursor: default;
   &__label {
     position: absolute;
     top: var(--component-select-label-top, 50%);
-    left: var(--component-select-label-left, 0);
+    left: var(--component-select-padding, 0);
     color: var(--component-select-label-color, var(--c-secondary-variant));
     transform: var(
       --component-select-label-transform,
@@ -72,13 +58,13 @@
     );
     &::after {
       content: var(--component-select-label-required);
-      color: var(--component-select-label-color, var(--c-primary));
+      color: var(--component-select-label-color, var(--c-dark));
     }
   }
   &__chevron {
     --chevron-position: absolute;
     display: var(--chevron-display, block);
-    right: var(--spacer-xs);
+    right: var(--component-select-chevron-right);
     top: 50%;
     transform: translate3d(0, -50%, 0);
   }
@@ -122,7 +108,9 @@
     }
   }
   &__error-message {
-    --component-select-border-color: var(--c-danger);
+    position: absolute;
+    bottom: var(--form-field-error-bottom);
+    right: var(--form-field-error-right);
     color: var(--component-select-error-message-color, var(--c-danger));
     min-height: var(
       --component-select-error-message-height,
@@ -148,7 +136,7 @@
     --component-select-border-color: var(--c-link);
   }
   &.is-selected {
-    --component-select-label-top: 0;
+    --component-select-label-top: var(--form-label-active-top);
     --component-select-label-font-size: var(--font-size--xs);
   }
   &.is-invalid {

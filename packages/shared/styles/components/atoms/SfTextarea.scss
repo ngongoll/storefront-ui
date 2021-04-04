@@ -5,6 +5,7 @@
   textarea {
     resize: var(--textarea-resize, auto);
     color: var(--textarea-color);
+    background-color: var(--textarea-background);
     @include font(
       --textarea-font,
       var(--font-weight--normal),
@@ -15,7 +16,7 @@
     height: var(--textarea-height);
     width: var(--textarea-width);
     padding: var(--textarea-padding, var(--spacer-sm));
-    @include border(--textarea-border, 1px, solid, var(--c-link));
+    border: none;
     &:focus {
       --textarea-border-color: var(--c-primary);
       & ~ * {
@@ -30,7 +31,7 @@
       --textarea-color: var(--c-text-disabled);
       & ~ * {
         --textarea-label-color: var(--c-text-disabled);
-      }  
+      }
     }
     &:required {
       & ~ * {
@@ -60,7 +61,11 @@
     right: var(--textarea-label-right);
     transform: var(--textarea-label-transform);
     color: var(--textarea-label-color, var(--c-link));
-    transition: var(--textarea-label-transition, transform 150ms linear, font-size 150ms linear);
+    transition: var(
+      --textarea-label-transition,
+      transform 150ms linear,
+      font-size 150ms linear
+    );
     &::after {
       content: var(--textarea-label-required);
       --textarea-label-color: var(--c-primary);
@@ -90,4 +95,3 @@
     );
   }
 }
-

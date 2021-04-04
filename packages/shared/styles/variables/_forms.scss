@@ -1,0 +1,34 @@
+:root {
+  //Global Form Vars
+  --form-field-background: var(--c-primary-variant);
+  --form-field-active-background: var(--c-primary);
+  --form-field-padding-x: 1.6rem;
+  --form-field-padding-y: 0.6rem;
+  --form-field-error-right: 0.3rem;
+  --form-field-error-bottom: 0.3rem;
+  --form-label-active-top: 10%;
+
+  //Basic Input-Fields
+  --input-background: var(--form-field-background);
+  --input-padding: var(--form-field-padding-x);
+  --input-label-padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  --input-label-background: transparent;
+  --input-label-color: var(--c-dark);
+
+  //Select Fields
+  --component-select-padding: var(--form-field-padding-x);
+  --component-select-selected-padding: var(--form-field-padding-x);
+  --component-select-option-padding: 0;
+  --component-select-option-background: var(--c-light);
+  --component-select-background: var(--form-field-background);
+  --component-select-height: 86px;
+  --component-select-chevron-right: var(--form-field-padding-x);
+
+  //Radio Fields
+  --radio-container-padding: 0;
+  --radio-container-align-items: center;
+  --radio-checkmark-size: 2.4rem;
+
+  //Textarea
+  --textarea-background: var(--form-field-background);
+}
